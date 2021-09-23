@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mess Menu</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <!-- PWA -->
+    <meta name="theme-color" content="#ff8c00">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        // If browser supports service workers
+        if("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js")
+        }
+    </script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="page">
+        <div class="category" id="B">
+            <header>Breakfast</header>
+            <div class="menu">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+            </div>
+        </div>
+        <div class="category" id="L">
+            <header>Lunch</header>
+            <div class="menu">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 3</div>
+            </div>
+        </div>
+        <div class="category" id="D">
+            <header>Dinner</header>
+            <div class="menu">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+:root {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    --breakfast-accent: #ff8c00;
+    --lunch-accent: #00fa9a;
+    --dinner-accent: skyblue;
+}
+
+* {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    height: -webkit-fill-available;
+    width: 100vw;
+    background-color: black;
+}
+
+#page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#B {background-color: var(--breakfast-accent);}
+#L {background-color: var(--lunch-accent);}
+#D {background-color: var(--dinner-accent);}
+
+header {
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 0.5em;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    font-weight: 600;
+    padding: 0.5em;
+}
