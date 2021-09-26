@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --bits-blue: hsl(193, 100%, 75%);
+            --bits-red: hsl(358, 100%, 75%);
+            --bits-yellow: hsl(47, 100%, 75%);
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #background {
+            height: 256px;
+            width: 256px;
+            background: linear-gradient(to right, var(--bits-blue) 33.333%, var(--bits-red) 33.333%, var(--bits-red) 66.667%, var(--bits-yellow) 66.667%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 7em;
+        }
+
+        img {
+            height: 65%;
+            aspect-ratio: 1 / 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="background">
+        <img src="restaurant.png" alt="">
+    </div>
+</body>
+</html>
