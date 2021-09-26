@@ -82,6 +82,8 @@ header {
     text-transform: uppercase;
     font-weight: 800;
     padding: 0.5em;
+    height: 2em;
+    overflow: hidden;
     font-size: 1.5em;
     background-color: rgba(0, 0, 0, 0.25);
 }
@@ -96,4 +98,13 @@ header {
 .item {
     font-weight: 600;
     padding: 0.5em;
+}
+
+#relative-date {
+    font-weight: 600;
+    text-transform: lowercase;
+    letter-spacing: 0;
+    background-color: royalblue;
+    color: black;
+    padding: 0;
 }

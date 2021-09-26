@@ -2,13 +2,22 @@ const print = console.log
 const gid = (id)=>document.getElementById(id)
 
 var selected_day = 0
+var current_day = 0
 
-function setup(day) {
-    print(day)
-    let items = Object.entries(menu)[day][1]
+function setup() {
+    let items = Object.entries(menu)[selected_day][1]
     // Show the selected day
-    print(Object.entries(menu)[day][0])
-    gid("date").children[1].innerHTML = Object.entries(menu)[day][0]
+    gid("date").children[1].innerHTML = Object.entries(menu)[selected_day][0]
+    // Add a subtext maybe?
+    if(selected_day == current_day) {
+        gid("relative-date").innerHTML = "today"
+    }
+    else if(selected_day == (current_day + 1)%7) {
+        gid("relative-date").innerHTML = "tomorrow"
+    }
+    else {
+        gid("relative-date").innerHTML = ""
+    }
     print(items)
     for(let [category, list] of Object.entries(items)) {
         list = list[0].split(", ")
@@ -17,15 +26,15 @@ function setup(day) {
 }
 
 window.onload = ()=>{
-    selected_day = (new Date().getDay()+6)%7
-    setup(selected_day)
+    selected_day = current_day = (new Date().getDay()+6)%7
+    setup()
     gid("next-day").onclick = ()=>{
         selected_day = (selected_day + 1) % 7
-        setup(selected_day)
+        setup()
     }
     gid("previous-day").onclick = ()=>{
-        selected_day = (selected_day - 1) % 7
-        setup(selected_day)
+        selected_day = (selected_day + 6) % 7
+        setup()
     }
 }
 
