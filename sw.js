@@ -1,7 +1,7 @@
-const CACHE_VERSION = 10
+const CACHE_VERSION = 11
 const CURRENT_CACHE = `cache-${CACHE_VERSION}`
 
-const cache_files = ["/index.html", "/main.js", "/main.css", "/images/", "/offline.html"]
+const cache_files = ["/index.html", "/main.js", "/main.css", "/images/", "/offline/"]
 
 self.addEventListener("install", event=>{
     event.waitUntil(caches.open(CURRENT_CACHE).then(cache=>{
@@ -38,7 +38,7 @@ function update(request) {
 
 function from_cache(request) {
     caches.open(CURRENT_CACHE).then(cache => {
-        cache.match(request).then(response => response || cache.match('/offline.html'))
+        cache.match(request).then(response => response || cache.match('/offline/'))
     })
 };
 
