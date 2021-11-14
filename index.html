@@ -13,7 +13,10 @@
     <script>
         // If browser supports service workers
         if("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("sw.js")
+            // console.log("Caches", caches)
+            window.addEventListener("load", function() {
+                navigator.serviceWorker.register("sw.js")
+            })
         }
     </script>
     <!-- CSS -->
