@@ -1,4 +1,4 @@
-const CACHE_VERSION = 11
+const CACHE_VERSION = 12
 const CURRENT_CACHE = `cache-${CACHE_VERSION}`
 
 const cache_files = ["/index.html", "/main.js", "/main.css", "/images/", "/offline/"]
