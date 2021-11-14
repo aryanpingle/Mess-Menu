@@ -40,45 +40,45 @@ window.onload = () => {
 
 var menu = {
     "Monday": {
-        "B": ["Masala Poha, Tea + Coffee"],
-        "L": ["Bhendi, Sprout Matki, Dal Tadka, Rice, Pickle, Chapati, Butter Milk, Salad"],
+        "B": ["Masala Poha, Tea + Coffee, Bread Jam"],
+        "L": ["Bhendi, Sprout Matki, Dal Tadka, Rice, Pickle, Chapati, Sweet Lassi, Papad"],
         "S": ["Vada Pav, Tea + Coffee"],
         "D": ["Aloo Gobi, Black Chana, Rice + Dal, Chapati, Pickle, Papad"]
     },
     "Tuesday": {
-        "B": ["Idli Sambar, Tea + Coffee"],
-        "L": ["Punjabi Chole, Aloo Jeera, Lasuni Dal, Pickle, Puri, Tang, Papad"],
+        "B": ["Idli Sambar, Tea + Coffee, Bread Jam"],
+        "L": ["Punjabi Chole, Aloo Jeera, Lasuni Dal, Rice, Pickle, Puri, Lime Juice, Mix Salad"],
         "S": ["Bhelpuri, Tea + Coffee"],
-        "D": ["Mix Veg Dry, Chawali Masala, Rice + Dal, Chapati, Pickle, Salad"]
+        "D": ["Mix Veg Dry, Chawali Masala, Dal Khichdi, Chapati, Pickle, Mong Salad"]
     },
     "Wednesday": {
-        "B": ["Aloo Paratha, Tea + Coffee"],
-        "L": ["Cabbage, Aloo Mattar, Rice + Dal, Pickle, Chapati, Butter Milk, Salad"],
+        "B": ["Aloo Paratha, Tea + Coffee, Bread Jam"],
+        "L": ["Dum Aloo Gravy, Cabbage, Dal Fry, Rice, Chapati, Pickle, Butter Milk, Papad"],
         "S": ["Masala Sandwich, Tea + Coffee"],
-        "D": ["Palak, Raima Masala, Rice + Dal, Pickle, Chapati, Papad"]
+        "D": ["Paneer Gravy, Chicken Gravy, Lauki / Kaddu Masala, Dal Lasuni, Rice, Chapati, Pickle, Papad"]
     },
     "Thursday": {
-        "B": ["Puri Bhaji, Tea + Coffee"],
-        "L": ["Turai Chana, Kadi Pakoda, Rice + Dal, Pickle, Chapati, Tang, Papad"],
+        "B": ["Upma / Pav Bhaji, Tea + Coffee, Bread Jam"],
+        "L": ["Soya Masala Gravy, Beans Fugat (Dry), Dal Makhani, Rice, Pickle, Chapati, Tang, Frymus"],
         "S": ["Veg Maggi, Tea + Coffee"],
-        "D": ["Aloo Gobi, Mix Sprout, Rice + Dal, Pickle, Salad"]
+        "D": ["Mix Sprout Gravy, Aloo Palak, Dal Adraki, Veg Pulao, Chapati, Pickle, Green Salad"]
     },
     "Friday": {
-        "B": ["Uttappa / Medhu Wada, Tea + Coffee"],
-        "L": ["Veg Tawa, Rajma, Rice + Dal, Pickle, Chapati, Butter Milk, Salad"],
+        "B": ["Uttappa / Medhu Wada, Tea + Coffee, Bread Jam"],
+        "L": ["Veg Diwani Handi, Rajma Masala, Dal Fry, Rice, Pickle, Chapati, Dahi, Salad"],
         "S": ["Samosa, Tea + Coffee"],
-        "D": ["Baingan, White Watana, Rice + Dal, Pickle, Chapati, Papad"]
+        "D": ["White Watana Gravy, Bhendi Masala, Dal Tadka, Rice, Pickle, Chapati, Papad"]
     },
     "Saturday": {
-        "B": ["Pav Bhaji, Tea + Coffee"],
-        "L": ["Aloo Shimla, Chole Amrutsari, Rice + Dal, Pickle, Chapati, Tang, Papad"],
+        "B": ["Masala Dosa, Tea + Coffee, Bread Jam"],
+        "L": ["Aloo Capsicum, Kadi Pakoda, Mix Dal, Rice, Pickle, Chapati, Tang, Papad"],
         "S": ["Veg Sandwich, Tea + Coffee"],
-        "D": ["Dry Soya, Moong Usal, Rice + Dal, Pickle, Chapati, Salad"]
+        "D": ["Dry Soya, Moong Usal, Rassam, Lemon Rice, Pickle, Chapati, Green Salad"]
     },
     "Sunday": {
-        "B": ["Masala Dosa, Tea + Coffee"],
-        "L": ["Veg Jalfrizi, Chawli, Rice + Dal, Pickle, Chapati, Salad"],
+        "B": ["Chole Bhature, Tea + Coffee, Bread Jam"],
+        "L": ["Veg Kuram GRavy, Veg Biryani, Dal Fry, Rice, Pickle, Chapati, Veg Raita, Green Salad"],
         "S": ["Bread Pakoda, Tea + Coffee"],
-        "D": ["Veg Manchurian, Green Peas, Veg Fried Rice + Dal, Pickle, Chapati, Papad"]
+        "D": ["Veg Manchurian, Green Peas Gravy, Dal, Veg Fried Rice, Pickle, Chapati, Papad"]
     }
 }
