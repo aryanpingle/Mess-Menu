@@ -10,15 +10,6 @@
     <meta name="theme-color" content="#000000">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
-    <script>
-        // If browser supports service workers
-        if("serviceWorker" in navigator) {
-            // console.log("Caches", caches)
-            window.addEventListener("load", function() {
-                navigator.serviceWorker.register("sw.js")
-            })
-        }
-    </script>
     <!-- CSS -->
     <link rel="stylesheet" href="main.css">
 </head>

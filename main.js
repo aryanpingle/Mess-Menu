@@ -1,5 +1,6 @@
 const print = console.log
 const gid = (id) => document.getElementById(id)
+const log = (text, color)=>print(`%c${text}`, `color: black; background-color: ${color}`)
 
 var selected_day = 0
 var current_day = 0
@@ -26,6 +27,9 @@ function setup() {
 }
 
 window.onload = () => {
+    if("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("../sw.js").then(reg => log("Service Worker Registered", "yellow"))
+    }
     selected_day = current_day = (new Date().getDay() + 6) % 7
     setup()
     gid("next-day").onclick = () => {
