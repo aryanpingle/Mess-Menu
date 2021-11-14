@@ -1,7 +1,7 @@
 const CACHE_VERSION = 10
 const CURRENT_CACHE = `cache-${CACHE_VERSION}`
 
-const cache_files = ["/main.css","/index.html","/main.js", "/offline.html"]
+const cache_files = ["/index.html", "/main.js", "/main.css", "/images/", "/offline.html"]
 
 self.addEventListener("install", event=>{
     event.waitUntil(caches.open(CURRENT_CACHE).then(cache=>{
