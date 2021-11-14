@@ -3,6 +3,7 @@
     font-size: 25px;
     --breakfast-accent: #ff8c00;
     --lunch-accent: #00fa9a;
+    --snacks-accent: #facc00;
     --dinner-accent: skyblue;
 }
 
@@ -75,6 +76,7 @@ body {
 
 #B {background-color: var(--breakfast-accent);}
 #L {background-color: var(--lunch-accent);}
+#S {background-color: var(--snacks-accent);}
 #D {background-color: var(--dinner-accent);}
 
 header {
