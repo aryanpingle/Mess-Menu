@@ -3,10 +3,10 @@ const log = text => console.log(`%c${text}`, `color: black; background-color: rg
 const CACHE_VERSION = 1
 const CURRENT_CACHE = `v${CACHE_VERSION}`
 
-const cache_files = ["/index.html", "/main.js", "/main.css", "/images/right-arrow-min.png", "/offline/"]
+const cache_files = ["/", "/index.html", "/main.js", "/main.css", "/images/right-arrow-min.png"]
 
 self.addEventListener("install", event => {
-    // log("Service Worker Installed")
+    log("Service Worker Installed")
 
     event.waitUntil(
         caches
