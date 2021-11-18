@@ -63,7 +63,7 @@ var menu = {
     },
     "Thursday": {
         "B": ["Upma / Pav Bhaji, Tea + Coffee, Bread Jam"],
-        "L": ["Soya Masala Gravy, Beans Fugat (Dry), Dal Makhani, Rice, Pickle, Chapati, Tang, Frymus"],
+        "L": ["Soya Masala Gravy, Beans Fugat (Dry), Dal Makhani, Rice, Pickle, Chapati, Tang, Fryums"],
         "S": ["Veg Maggi, Tea + Coffee"],
         "D": ["Mix Sprout Gravy, Aloo Palak, Dal Adraki, Veg Pulao, Chapati, Pickle, Green Salad"]
     },
