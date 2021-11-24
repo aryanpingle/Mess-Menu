@@ -63,7 +63,7 @@ async function get_request(request_event) {
         return get_network_request(request_event).catch(err => get_cache_request(request_event))
     }
     log("Performing Cache Request", "greenyellow")
-    return get_cache_request(request_event).catch(err => get_network_request(request_event))
+    return get_cache_request(request_event)
 }
 
 async function get_cache_request(request_event) {
