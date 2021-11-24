@@ -67,7 +67,7 @@ async function get_request(request_event) {
 }
 
 async function get_cache_request(request_event) {
-    return cache.match(request_event.request)
+    return caches.match(request_event.request)
 }
 
 async function get_network_request(request_event) {
