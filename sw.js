@@ -1,7 +1,8 @@
-const log = text => console.log(`%c${text}`, `color: black; background-color: rgb(255, 128, 0);`)
+const log = (text, color="rgb(255, 128, 0)") => console.log(`%c${text}`, `color: black; background-color: ${color};`)
 
 const CACHE_VERSION = 1
 const CURRENT_CACHE = `v${CACHE_VERSION}`
+var STRAT = "network-first"
 
 const cache_files = ["/", "/index.html", "/main.js", "/main.css", "/images/right-arrow-min.png", "/images/favicon.png"]
 
@@ -14,6 +15,7 @@ self.addEventListener("install", event => {
             .then(cache => {
                 log("Service Worker Cached")
                 cache.addAll(cache_files)
+                return cache
             })
             .then(() => self.skipWaiting())
     )
@@ -39,7 +41,35 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", event => {
     log("Service Worker Fetching")
+
     event.respondWith(
-        fetch(event.request).catch(err => caches.match(event.request))
+        get_request(event)
     )
 })
+
+async function get_request(request_event) {
+    if(request_event.request.url.includes("cache-first")) {
+        console.log("Switching to cache first")
+        STRAT = "cache-first"
+        return new Response(0)
+    }
+    if(request_event.request.url.includes("network-first")) {
+        console.log("Switching to network first")
+        STRAT = "network-first"
+        return new Response(0)
+    }
+    if(STRAT == "network-first") {
+        log("Performing Network Request", "cyan")
+        return get_network_request(request_event).catch(err => get_cache_request(request_event))
+    }
+    log("Performing Cache Request", "greenyellow")
+    return get_cache_request(request_event).catch(err => get_network_request(request_event))
+}
+
+async function get_cache_request(request_event) {
+    return cache.match(request_event.request)
+}
+
+async function get_network_request(request_event) {
+    return fetch(request_event.request)
+}
