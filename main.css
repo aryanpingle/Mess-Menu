@@ -30,16 +30,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-
+    
     overflow: auto;
 }
 
-#bruh {
+#actual-menu {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-
+    
     overflow: auto;
 }
 

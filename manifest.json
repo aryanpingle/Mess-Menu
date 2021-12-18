@@ -2,57 +2,91 @@
     "short_name": "Mess Menu",
     "name": "BPGC Mess Menu",
     "icons": [
-        {
-            "src": "/images/logo72.png",
-            "type": "image/png",
-            "sizes": "72x72"
-        },
-        {
-            "src": "/images/logo96.png",
-            "type": "image/png",
-            "sizes": "96x96"
-        },
-        {
-            "src": "/images/logo120.png",
-            "type": "image/png",
-            "sizes": "120x120"
-        },
-        {
-            "src": "/images/logo128.png",
-            "type": "image/png",
-            "sizes": "128x128"
-        },
-        {
-            "src": "/images/logo144.png",
-            "type": "image/png",
-            "sizes": "144x144"
-        },
-        {
-            "src": "/images/logo152.png",
-            "type": "image/png",
-            "sizes": "152x152"
-        },
-        {
-            "src": "/images/logo180.png",
-            "type": "image/png",
-            "sizes": "180x180"
-        },
-        {
-            "src": "/images/logo192.png",
-            "type": "image/png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "/images/logo384.png",
-            "type": "image/png",
-            "sizes": "384x384"
-        },
-        {
-            "src": "/images/logo512.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        }
-    ],
+		{
+			"src": "/images/logo72.png",
+			"type": "image/png",
+			"sizes": "72x72",
+			"purpose": "any"
+		},
+		{
+			"src": "/images/logo72.png",
+			"type": "image/png",
+			"sizes": "72x72",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/logo96.png",
+			"type": "image/png",
+			"sizes": "96x96",
+			"purpose": "any"
+		},
+		{
+			"src": "/images/logo96.png",
+			"type": "image/png",
+			"sizes": "96x96",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/logo144.png",
+			"type": "image/png",
+			"sizes": "144x144",
+			"purpose": "any"
+		},
+		{
+			"src": "/images/logo144.png",
+			"type": "image/png",
+			"sizes": "144x144",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/logo192.png",
+			"type": "image/png",
+			"sizes": "192x192",
+			"purpose": "any"
+		},
+		{
+			"src": "/images/logo192.png",
+			"type": "image/png",
+			"sizes": "192x192",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/logo256.png",
+			"type": "image/png",
+			"sizes": "256x256",
+			"purpose": "any"
+		},
+		{
+			"src": "/images/logo256.png",
+			"type": "image/png",
+			"sizes": "256x256",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/logo384.png",
+			"type": "image/png",
+			"sizes": "384x384",
+			"purpose": "any"
+		},
+		{
+			"src": "/images/logo384.png",
+			"type": "image/png",
+			"sizes": "384x384",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/logo720.png",
+			"type": "image/png",
+			"sizes": "720x720",
+			"purpose": "any"
+		},
+		{
+			"src": "/images/logo720.png",
+			"type": "image/png",
+			"sizes": "720x720",
+			"purpose": "maskable"
+		}
+	],
     "start_url": "/index.html",
     "background_color": "#000000",
     "display": "standalone",
