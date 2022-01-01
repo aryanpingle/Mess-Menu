@@ -4,7 +4,7 @@ const CACHE_VERSION = 5
 const CURRENT_CACHE = `v${CACHE_VERSION}`
 var FETCH_TYPE = null
 
-const cache_files = ["/", "/index.html", "/main.js", "/main.css", "/images/right-arrow-min.png", "/images/logo96.png", "/images/logo144.png", "/images/logo192.png", "/images/logo720.png"]
+const cache_files = ["/", "/index.html", "/main.js", "/main.css", "/images/right-arrow-min.png", "/images/logo96.png", "/images/logo144.png", "/images/logo192.png", "/images/logo720.png", "/gtag.js"]
 
 self.addEventListener("install", event => {
     log("Service Worker Installed")
