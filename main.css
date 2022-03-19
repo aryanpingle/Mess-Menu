@@ -54,13 +54,18 @@ body {
 }
 
 .day-text {
-    cursor: pointer;
     border-radius: 999px;
     height: 1.75em;
     display: flex;
     justify-content: center;
     align-items: center;
     aspect-ratio: 1 / 1;
+}
+
+@media (min-width: 720px) {
+    .day-text {
+        cursor: pointer;
+    }
 }
 
 .day-choice.day-choice--today .day-text {
