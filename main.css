@@ -95,30 +95,6 @@ body {
     align-items: center;
 }
 
-#date {
-    color: white;
-    font-size: 0.9em;
-    letter-spacing: 0.2em;
-    flex-direction: row;
-}
-
-#date img {
-    content: url(images/right-arrow-min.png);
-    width: 50%;
-    aspect-ratio: 1 / 1;
-    filter: invert(1);
-}
-#previous-day, #next-day {
-    width: 75px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#previous-day img {
-    transform: rotateY(180deg);
-}
-
 #B {background-color: var(--breakfast-accent);}
 #L {background-color: var(--lunch-accent);}
 #S {background-color: var(--snacks-accent);}
