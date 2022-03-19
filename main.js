@@ -3,22 +3,9 @@ const gid = (id) => document.getElementById(id)
 const log = (text, color)=>print(`%c${text}`, `color: black; background-color: ${color}`)
 
 var selected_day = 0
-var current_day = 0
 
 function setup() {
     let items = Object.entries(menu)[selected_day][1]
-    // Show the selected day
-    gid("date").children[1].innerHTML = Object.entries(menu)[selected_day][0]
-    // Add a subtext maybe?
-    if (selected_day == current_day) {
-        gid("relative-date").innerHTML = "today"
-    }
-    else if (selected_day == (current_day + 1) % 7) {
-        gid("relative-date").innerHTML = "tomorrow"
-    }
-    else {
-        gid("relative-date").innerHTML = ""
-    }
     print(items)
     for (let [category, list] of Object.entries(items)) {
         document.getElementById(category).lastElementChild.innerHTML = list.map(ele => `<div class="item">${ele}</div>`).join("")
@@ -27,18 +14,20 @@ function setup() {
 
 window.onload = () => {
     if("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("../sw.js").then(reg => log("Service Worker Registered", "yellow"))
+        navigator.serviceWorker.register("sw.js").then(reg => log("Service Worker Registered", "yellow"))
     }
-    selected_day = current_day = (new Date().getDay() + 6) % 7
+    // new Date().getDay() returns 1 for Monday, 0/7 for Sunday
+    selected_day = (new Date().getDay() + 6) % 7
+    document.querySelector(".day-picker").children[selected_day].classList.add("day-choice--today", "day-choice--selected")
     setup()
-    gid("next-day").onclick = () => {
-        selected_day = (selected_day + 1) % 7
-        setup()
-    }
-    gid("previous-day").onclick = () => {
-        selected_day = (selected_day + 6) % 7
-        setup()
-    }
+    document.querySelectorAll(".day-choice").forEach((day_choice, index) => {
+        day_choice.onclick = event => {
+            document.querySelector(".day-choice--selected").classList.remove("day-choice--selected")
+            day_choice.classList.add("day-choice--selected")
+            selected_day = index
+            setup()
+        }
+    })
 }
 
 var menu = {

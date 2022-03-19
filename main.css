@@ -34,6 +34,46 @@ body {
     overflow: auto;
 }
 
+/* Day Picker */
+
+.day-picker {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0.5em 0.25em;
+    font-weight: 700;
+}
+
+.day-choice {
+    width: 100%;
+    flex: 1 1 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-text {
+    cursor: pointer;
+    border-radius: 999px;
+    height: 1.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+}
+
+.day-choice.day-choice--today .day-text {
+    border: 2px dashed deepskyblue;
+}
+
+.day-choice.day-choice--selected .day-text {
+    background-color: deepskyblue;
+    color: black;
+}
+
+/* Actual Menu */
+
 #actual-menu {
     height: 100%;
     display: flex;
