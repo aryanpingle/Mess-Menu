@@ -23,6 +23,8 @@ window.onload = () => {
     setup()
     document.querySelectorAll(".day-choice").forEach((day_choice, index) => {
         day_choice.onclick = event => {
+            navigator.vibrate(25)
+
             document.querySelector(".day-choice--selected").classList.remove("day-choice--selected")
             day_choice.classList.add("day-choice--selected")
             selected_day = index
