@@ -1,6 +1,6 @@
 const log = (text, color="rgb(255, 128, 0)") => console.log(`%c${text}`, `color: black; background-color: ${color};`)
 
-const CACHE_VERSION = 5
+const CACHE_VERSION = 5.1
 const CURRENT_CACHE = `v${CACHE_VERSION}`
 var FETCH_TYPE = null
 
@@ -64,10 +64,12 @@ async function get_request(request_event) {
         caches.open(CURRENT_CACHE).then(cache=>cache.put("fetch-type", new Response(FETCH_TYPE)))
         return new Response(0)
     }
+    
     if(FETCH_TYPE == "network-first") {
         log("Performing Network Request", "cyan")
         return get_network_request(request_event).catch(err => get_cache_request(request_event))
     }
+    
     log("Performing Cache Request", "greenyellow")
     return get_cache_request(request_event)
 }
@@ -77,5 +79,9 @@ async function get_cache_request(request_event) {
 }
 
 async function get_network_request(request_event) {
-    return fetch(request_event.request)
+    return fetch(request_event.request).then(response => {
+        let response_clone = response.clone()
+        caches.open(CURRENT_CACHE).then(cache => cache.put(request_event.request, response_clone))
+        return response
+    })
 }
