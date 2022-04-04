@@ -1,10 +1,10 @@
 const log = (text, color="rgb(255, 128, 0)") => console.log(`%c${text}`, `color: black; background-color: ${color};`)
 
-const CACHE_VERSION = 5.1
+const CACHE_VERSION = 5.2
 const CURRENT_CACHE = `v${CACHE_VERSION}`
 var FETCH_TYPE = null
 
-const cache_files = ["/", "/index.html", "/main.js", "/main.css", "/images/right-arrow-min.png", "/images/logo96.png", "/images/logo144.png", "/images/logo192.png", "/images/logo720.png", "/gtag.js"]
+const cache_files = ["/", "/index.html", "/main.js", "/main.css", "/images/right-arrow-min.png", "/images/logo96.png", "/images/logo144.png", "/images/logo192.png", "/images/logo720.png"]
 
 self.addEventListener("install", event => {
     log("Service Worker Installed")
