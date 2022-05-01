@@ -35,7 +35,7 @@ window.onload = () => {
 
 var menu = {
     "Monday": {
-        "B": "Onion Poha + Sweet Curd, ",
+        "B": "Onion Poha + Sweet Curd",
         "L": "Veg Handi Gravy, Soya Chilly Dry, Dal Tadka, Rice, Pickle, Chapati, Sweet Lassi, Papad",
         "S": "Vada Pav",
         "D": "Black Chana Gravy, Aloo Bhendi Dry, Dal Tomato, Jeera Rice, Chapati, Rassam, Salad"
