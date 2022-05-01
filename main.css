@@ -62,7 +62,8 @@ body {
 }
 
 .day-text {
-    border-radius: 999px;
+    padding-top: 1px;
+    border-radius: 5px;
     height: 1.75em;
     width: 1.75em;
     display: flex;
