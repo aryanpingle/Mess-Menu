@@ -1,4 +1,4 @@
-const log = (text, color="rgb(255, 128, 0)") => console.log(`%c${text}`, `color: black; background-color: ${color};`)
+const log = (text, color="rgb(255, 128, 0)") => self.registration.scope.includes("127") && 0 ? console.log(`%c${text}`, `color: black; background-color: ${color};`) : 0
 
 const CACHE_VERSION = 5.4
 const CURRENT_CACHE = `v${CACHE_VERSION}`

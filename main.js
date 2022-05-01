@@ -6,15 +6,36 @@ var selected_day = 0
 
 function setup() {
     let items = Object.entries(menu)[selected_day][1]
-    print(items)
+    // print(items)
     for (let [category, list] of Object.entries(items)) {
         document.getElementById(category).lastElementChild.innerHTML = list.map(ele => `<div class="item">${ele}</div>`).join("")
     }
+    const current_hours = new Date().getHours()
+    let cumulative = 0
+    if(current_hours < 10) {
+        // Already at #B
+    }
+    else if(current_hours < 14) {
+        // Jump to #L
+        cumulative += document.querySelector("#B").offsetHeight
+    }
+    else if(current_hours < 18) {
+        // Jump to #S
+        cumulative += document.querySelector("#B").offsetHeight
+        cumulative += document.querySelector("#L").offsetHeight
+    }
+    else {
+        // Jump to #D
+        cumulative += document.querySelector("#B").offsetHeight
+        cumulative += document.querySelector("#L").offsetHeight
+        cumulative += document.querySelector("#S").offsetHeight
+    }
+    document.querySelector("#actual-menu").scrollTo(0, cumulative)
 }
 
 window.onload = () => {
     if("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js").then(reg => log("Service Worker Registered", "yellow"))
+        navigator.serviceWorker.register("sw.js")
     }
     // new Date().getDay() returns 1 for Monday, 0/7 for Sunday
     selected_day = (new Date().getDay() + 6) % 7
