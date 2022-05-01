@@ -24,7 +24,7 @@ function setup() {
         cumulative += document.querySelector("#B").offsetHeight
         cumulative += document.querySelector("#L").offsetHeight
     }
-    else {
+    else if(current_hours < 22) {
         // Jump to #D
         cumulative += document.querySelector("#B").offsetHeight
         cumulative += document.querySelector("#L").offsetHeight
