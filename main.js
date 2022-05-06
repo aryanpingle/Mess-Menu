@@ -6,14 +6,6 @@ let DEFERRED_INSTALL_PROMPT = null
 let selected_day = 0
 
 function setup() {
-    let items = Object.entries(menu)[selected_day][1]
-    // print(items)
-    for (let [category, list] of Object.entries(items)) {
-        document.getElementById(category).lastElementChild.innerHTML = list.map(ele => `<div class="item">${ele}</div>`).join("")
-    }
-}
-
-window.onload = () => {
     // Register Service Worker
     if("serviceWorker" in navigator) {
         navigator.serviceWorker.register("sw.js")
@@ -24,7 +16,7 @@ window.onload = () => {
     
     // Set the current day and select it
     document.querySelector(".day-picker").children[selected_day].classList.add("day-choice--today", "day-choice--selected")
-    setup()
+    initialize_menu()
 
     // Jump to the current time in the day
     const current_hours = new Date().getHours()
@@ -57,12 +49,20 @@ window.onload = () => {
             document.querySelector(".day-choice--selected").classList.remove("day-choice--selected")
             day_choice.classList.add("day-choice--selected")
             selected_day = index
-            setup()
+            initialize_menu()
         }
     })
 }
 
-var menu = {
+function initialize_menu() {
+    let items = Object.entries(menu)[selected_day][1]
+    // print(items)
+    for (let [category, list] of Object.entries(items)) {
+        document.getElementById(category).lastElementChild.innerHTML = list.map(ele => `<div class="item">${ele}</div>`).join("")
+    }
+}
+
+let menu = {
     "Monday": {
         "B": "Onion Poha + Sweet Curd",
         "L": "Veg Handi Gravy, Cabbage Mattar Dry, Dal Makhani, Rice, Pickle, Chapati, Sweet Lassi, Papad",
@@ -121,3 +121,6 @@ for(let [day, list] of Object.entries(menu)) {
         menu[day][category] = items
     }
 }
+
+// Run setup
+setup()
