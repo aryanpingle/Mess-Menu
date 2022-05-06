@@ -1,6 +1,7 @@
 const print = console.log
 const gid = (id) => document.getElementById(id)
 const log = (text, color)=>print(`%c${text}`, `color: black; background-color: ${color}`)
+let DEFERRED_INSTALL_PROMPT = null
 
 var selected_day = 0
 
@@ -13,11 +14,14 @@ function setup() {
 }
 
 window.onload = () => {
+    // Register Service Worker
     if("serviceWorker" in navigator) {
         navigator.serviceWorker.register("sw.js")
     }
+
     // new Date().getDay() returns 1 for Monday, 0/7 for Sunday
     selected_day = (new Date().getDay() + 6) % 7
+    
     // Set the current day and select it
     document.querySelector(".day-picker").children[selected_day].classList.add("day-choice--today", "day-choice--selected")
     setup()
