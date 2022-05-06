@@ -10,6 +10,19 @@ function setup() {
     for (let [category, list] of Object.entries(items)) {
         document.getElementById(category).lastElementChild.innerHTML = list.map(ele => `<div class="item">${ele}</div>`).join("")
     }
+}
+
+window.onload = () => {
+    if("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js")
+    }
+    // new Date().getDay() returns 1 for Monday, 0/7 for Sunday
+    selected_day = (new Date().getDay() + 6) % 7
+    // Set the current day and select it
+    document.querySelector(".day-picker").children[selected_day].classList.add("day-choice--today", "day-choice--selected")
+    setup()
+
+    // Jump to the current time in the day
     const current_hours = new Date().getHours()
     let cumulative = 0
     if(current_hours < 10) {
@@ -31,17 +44,8 @@ function setup() {
         cumulative += document.querySelector("#S").offsetHeight
     }
     document.querySelector("#actual-menu").scrollTo(0, cumulative)
-}
 
-window.onload = () => {
-    if("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js")
-    }
-    // new Date().getDay() returns 1 for Monday, 0/7 for Sunday
-    selected_day = (new Date().getDay() + 6) % 7
-    // Set the current day and select it
-    document.querySelector(".day-picker").children[selected_day].classList.add("day-choice--today", "day-choice--selected")
-    setup()
+    // Setup the day choice buttons
     document.querySelectorAll(".day-choice").forEach((day_choice, index) => {
         day_choice.onclick = event => {
             if("vibrate" in navigator) navigator.vibrate(50)
