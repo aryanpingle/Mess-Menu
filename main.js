@@ -3,7 +3,7 @@ const gid = (id) => document.getElementById(id)
 const log = (text, color)=>print(`%c${text}`, `color: black; background-color: ${color}`)
 let DEFERRED_INSTALL_PROMPT = null
 
-var selected_day = 0
+let selected_day = 0
 
 function setup() {
     let items = Object.entries(menu)[selected_day][1]
