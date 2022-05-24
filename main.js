@@ -56,10 +56,18 @@ function setup() {
 
 function initialize_menu() {
     let items = Object.entries(menu)[selected_day][1]
-    // print(items)
     for (let [category, list] of Object.entries(items)) {
-        document.getElementById(category).lastElementChild.innerHTML = list.map(ele => `<div class="item">${ele}</div>`).join("")
+        print(list)
+        document.getElementById(category).querySelector(".menu__items").innerHTML = [...list[0].map(variable_item_html), ...list[1].map(everyday_item_html)].join("")
     }
+}
+
+function variable_item_html(item_name) {
+    return `<div class="menu__item menu__item--variable">${item_name}</div>`
+}
+
+function everyday_item_html(item_name) {
+    return `<div class="menu__item menu__item--everyday">${item_name}</div>`
 }
 
 let menu = {
@@ -116,9 +124,11 @@ var everyday = {
 
 for(let [day, list] of Object.entries(menu)) {
     for(let [category, items] of Object.entries(menu[day])) {
-        items = items.split(", ")
-        if(everyday[category] != '') items.push(...everyday[category].split(", "))
-        menu[day][category] = items
+        let variable_items = items.split(", ")
+        let everyday_items = []
+        if(everyday[category] != '') everyday_items = everyday[category].split(", ")
+
+        menu[day][category] = [variable_items, everyday_items]
     }
 }
 
