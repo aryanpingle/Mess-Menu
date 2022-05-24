@@ -34,6 +34,12 @@ body {
     overflow: auto;
 }
 
+@media (min-width: 720px) {
+    #page {
+        flex-direction: row;
+    }
+}
+
 /* Mess Period */
 
 .mess-period {
@@ -52,6 +58,7 @@ body {
     color: whitesmoke;
     padding: 0.5em 0.25em;
     font-weight: 700;
+    background-color: #242424;
 }
 
 .day-picker::after {
@@ -61,7 +68,20 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background: radial-gradient(#fff8, transparent 75%);
+    background: radial-gradient(#fff4, transparent 75%);
+}
+
+@media (min-width: 720px) {
+    .day-picker {
+        height: 100%;
+        flex-direction: column;
+        font-size: 1.5em;
+        padding: 0.25em 0.5em;
+    }
+
+    .day-picker::after {
+        content: unset;
+    }
 }
 
 .day-choice {
@@ -111,6 +131,32 @@ body {
     overflow: auto;
 }
 
+@media (min-width: 720px) {
+    #actual-menu {
+        --scrollbar-track-color: #242424;
+        --scrollbar-thumb-color: #363636;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.25em;
+
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+
+        scrollbar-width: 8px;
+        scrollbar-color: var(--scrollbar-track-color) var(--scrollbar-thumb-color);
+    }
+
+    #actual-menu::-webkit-scrollbar {
+        height: 8px;
+        background-color: var(--scrollbar-track-color);
+    }
+
+    #actual-menu::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb-color);
+    }
+}
+
 #B {--accent: var(--breakfast-accent);}
 #L {--accent: var(--lunch-accent);}
 #S {--accent: var(--snacks-accent);}
@@ -122,11 +168,32 @@ body {
     padding: 1em;
 }
 
+@media (min-width: 720px) {
+    .menu-category {
+        scroll-snap-align: start;
+        height: 75%;
+        width: 50%;
+        flex: 0 0 auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    .menu-category {
+        width: calc(100% / 3);
+    }
+}
+
 .menu-category-inner {
     position: relative;
     background-color: inherit;
     border: 4px solid var(--accent);
     border-radius: 10px;
+}
+
+@media (min-width: 720px) {
+    .menu-category-inner {
+        height: 100%;
+    }
 }
 
 .menu-category__header {
