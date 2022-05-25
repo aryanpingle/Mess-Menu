@@ -110,11 +110,11 @@ body {
 }
 
 .day-choice.day-choice--today .day-text {
-    border: 2px dashed deepskyblue;
+    border: 2px dashed #727272;
 }
 
 .day-choice.day-choice--selected .day-text {
-    background-color: deepskyblue;
+    background-color: #727272;
     color: black;
 }
 
