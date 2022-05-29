@@ -172,6 +172,7 @@ body {
         flex-direction: row;
         align-items: center;
         font-size: 1.25em;
+        padding: 0;
 
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
