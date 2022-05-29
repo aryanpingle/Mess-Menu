@@ -1,10 +1,10 @@
 const log = (text, color="rgb(128, 128, 128)") => self.registration.scope.includes("127") ? console.log(`%c${text}`, `color: black !important; background-color: ${color};`) : 0
 
-const APP_VERSION = 6.00
+const APP_VERSION = 6.01
 
 const DOC_CACHE_NAME = `DOC_CACHE`
 let DOC_CACHE = null
-const RES_CACHE_VERSION = 6.00
+const RES_CACHE_VERSION = 6.01
 const RES_CACHE_NAME = `RES_CACHEv${RES_CACHE_VERSION.toFixed(2)}`
 let RES_CACHE = null
 
@@ -37,7 +37,7 @@ self.addEventListener("activate", async event => {
 });
 
 self.addEventListener("fetch", event => {
-    event.respondWith(STOP_CACHING ? get_request(event) : fetch(event.request))
+    event.respondWith(STOP_CACHING ? fetch(event.request) : get_request(event))
 });
 
 async function get_request(request_event) {
