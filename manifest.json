@@ -1,7 +1,7 @@
 {
     "short_name": "Mess Menu",
     "name": "BPGC Mess Menu",
-	"description": "An interactive menu app for BITS Goa - Never squint at the photo of the mess menu ever again.",
+	"description": "An interactive menu app for BITS Goa - Never squint at a photo of the mess menu ever again.",
     "start_url": "/",
     "background_color": "#121212",
     "display": "standalone",
