@@ -6,11 +6,6 @@ let DEFERRED_INSTALL_PROMPT = null
 let selected_day = 0
 
 function setup() {
-    // Register Service Worker
-    if("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js")
-    }
-
     // new Date().getDay() returns 1 for Monday, 0/7 for Sunday
     selected_day = (new Date().getDay() + 6) % 7
     
@@ -57,7 +52,6 @@ function setup() {
 function initialize_menu() {
     let items = Object.entries(menu)[selected_day][1]
     for (let [category, list] of Object.entries(items)) {
-        print(list)
         document.getElementById(category).querySelector(".menu__items").innerHTML = [...list[0].map(variable_item_html), ...list[1].map(everyday_item_html)].join("")
     }
 }

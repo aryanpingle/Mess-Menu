@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 :root {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
     font-size: 25px;
     --breakfast-accent: hsl(20, 65%, 50%);
     --lunch-accent: hsl(157, 65%, 50%);
@@ -52,12 +54,12 @@ body {
 /* Day Picker */
 
 .day-picker {
+    font-family: 'Courier New', Courier, 'Roboto Mono', monospace;
     position: relative;
     display: flex;
     align-items: center;
     color: whitesmoke;
-    padding: 0.5em 0.25em;
-    font-weight: 700;
+    /* padding: 0.5em 0.25em; */
     background-color: #242424;
 }
 
@@ -76,7 +78,7 @@ body {
         height: 100%;
         flex-direction: column;
         font-size: 1.5em;
-        padding: 0.25em 0.5em;
+        /* padding: 0.25em 0.5em; */
     }
 
     .day-picker::after {
@@ -85,12 +87,52 @@ body {
 }
 
 .day-choice {
+    position: relative;
     width: 100%;
     flex: 1 1 0;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.35em 0;
+    font-weight: 500;
+}
+
+.day-choice::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+}
+
+.day-choice.day-choice--selected {
+    background-color: #363636;
+    font-weight: 800;
+}
+
+.day-choice.day-choice--selected::after {
+    background-color: #727272;
+}
+
+.day-choice.day-choice--today::after {
+    background-color: hsl(195, 75%, 50%);
+}
+
+@media (min-width: 720px) {
+    .day-choice {
+        padding: 0 0.5em;
+    }
+
+    .day-choice::after {
+        bottom: unset;
+        left: unset;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 100%;
+    }
 }
 
 .day-text {
@@ -107,15 +149,6 @@ body {
     .day-text {
         cursor: pointer;
     }
-}
-
-.day-choice.day-choice--today .day-text {
-    border: 2px dashed #727272;
-}
-
-.day-choice.day-choice--selected .day-text {
-    background-color: #727272;
-    color: black;
 }
 
 /* Actual Menu */

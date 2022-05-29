@@ -1,88 +1,97 @@
-const log = (text, color="rgb(255, 128, 0)") => self.registration.scope.includes("127") && 0 ? console.log(`%c${text}`, `color: black; background-color: ${color};`) : 0
+const log = (text, color="rgb(128, 128, 128)") => self.registration.scope.includes("127") ? console.log(`%c${text}`, `color: black !important; background-color: ${color};`) : 0
 
-const CACHE_VERSION = 5.4
-const CURRENT_CACHE = `v${CACHE_VERSION}`
-var FETCH_TYPE = null
+const APP_VERSION = 6.00
 
-const cache_files = ["/", "/index.html", "/main.js", "/main.css", "/images/right-arrow-min.png", "/images/logo96.png", "/images/logo144.png", "/images/logo192.png", "/images/logo720.png"]
+const DOC_CACHE_NAME = `DOC_CACHE`
+let DOC_CACHE = null
+const RES_CACHE_VERSION = 6.00
+const RES_CACHE_NAME = `RES_CACHEv${RES_CACHE_VERSION.toFixed(2)}`
+let RES_CACHE = null
+
+const STOP_CACHING = self.registration.scope.includes("127.0.0.1")
+String.prototype.endsWithAny = function (...ends) {
+    return ends.some(end => this.endsWith(end))
+}
 
 self.addEventListener("install", event => {
     log("Service Worker Installed")
 
-    event.waitUntil(
-        caches
-            .open(CURRENT_CACHE)
-            .then(cache => {
-                log("Service Worker Cached")
-                cache.addAll(cache_files)
-                return cache
-            })
-            .then(cache=>cache.put("fetch-type", new Response("network-first")))
-            .then(() => self.skipWaiting())
-    )
+    self.skipWaiting()
 });
 
-self.addEventListener("activate", event => {
+self.addEventListener("activate", async event => {
     log("Service Worker Activated")
 
+    // Create the two cachess
+    event.waitUntil((async () => {
+        await clients.claim()
+    })())
     // Remove other versions
-    event.waitUntil(
-        caches.keys().then(cache_names => {
-            return Promise.all(
-                cache_names.map(cache_name => {
-                    if (cache_name != CURRENT_CACHE) {
-                        log(`Service Worker => Deleting '${cache_name}'`)
-                        caches.delete(cache_name)
-                    }
-                })
-            )
-        })
-    )
+    let cache_names = await caches.keys()
+    cache_names.forEach(cache_name => {
+        if (cache_name != DOC_CACHE_NAME && cache_name != RES_CACHE_NAME) {
+            log(`Service Worker => Deleting '${cache_name}'`, "red")
+            caches.delete(cache_name)
+        }
+    })
 });
 
 self.addEventListener("fetch", event => {
-    log("Service Worker Fetching")
-    event.respondWith(get_request(event))
-})
+    event.respondWith(STOP_CACHING ? get_request(event) : fetch(event.request))
+});
 
 async function get_request(request_event) {
-    if(!FETCH_TYPE) {
-        FETCH_TYPE = await caches.match("fetch-type", {cacheName: CURRENT_CACHE})
-        FETCH_TYPE = await FETCH_TYPE.text()
-        console.log("FETCH SET TO "+FETCH_TYPE)
-    }
-
-    if(request_event.request.url.includes("cache-first")) {
-        console.log("Switching to cache first")
-        FETCH_TYPE = "cache-first"
-        caches.open(CURRENT_CACHE).then(cache=>cache.put("fetch-type", new Response(FETCH_TYPE)))
-        return new Response(0)
-    }
-    else if(request_event.request.url.includes("network-first")) {
-        console.log("Switching to network first")
-        FETCH_TYPE = "network-first"
-        caches.open(CURRENT_CACHE).then(cache=>cache.put("fetch-type", new Response(FETCH_TYPE)))
-        return new Response(0)
-    }
-
+    const request = request_event.request
+    const url = request.url
     
-    let cache_match = await caches.open(CURRENT_CACHE).then(cache => {
-        return cache.match(request_event.request)
-    })
-    
-    get_network_request(request_event)
+    if(RES_CACHE == null) {
+        DOC_CACHE = await caches.open(DOC_CACHE_NAME)
+        RES_CACHE = await caches.open(RES_CACHE_NAME)
+    }
 
-    return cache_match
-}
+    if(url.endsWithAny(".js", ".html", ".css", "/", "manifest.json")) {
+        log(`DOC: ${url}`)
+        // Check if cached version exists
+        let cache_match = await DOC_CACHE.match(request)
+        if(cache_match) {
+            // First perform network fetch in background
+            let abort_controller = new AbortController()
+            let signal = abort_controller.signal
+            let timeout_id = setTimeout(() => abort_controller.abort(), 5000)
+            fetch(request, {signal: signal}).then(response => {
+                clearTimeout(timeout_id)
+                DOC_CACHE.put(request, response)
+            }).catch(err => err)
 
-async function get_cache_request(request_event) {
-    return caches.match(request_event.request)
-}
+            // Return the cached version
+            return cache_match
+        }
+        else {
+            log(`${url} wasn't in cache, so doing fetch`, "yellow")
+            // Nothing in cache, perform basic fetch request
+            return fetch(request).then(response => {
+                let clone = response.clone()
+                DOC_CACHE.put(request, clone)
+                return response
+            })
+        }
+    }
+    else {
+        log(`RES: ${url}`)
+        // Resource like image, manifest etc.
+        let cache_match = await RES_CACHE.match(request, {ignoreVary: true})
+        if(cache_match) {
+            log(`${url} returned as cache`, "rgb(0, 255, 128)")
+            return cache_match
+        }
+        
+        // log(`${url} wasn't in cache, so doing fetch`)
+        return fetch(request).then(response => {
+            let clone = response.clone()
+            RES_CACHE.put(request, clone)
+            return response
+        })
+    }
 
-async function get_network_request(request_event) {
-    return fetch(request_event.request).then(response => {
-        let response_clone = response.clone()
-        caches.open(CURRENT_CACHE).then(cache => cache.put(request_event.request, response_clone))
-        return response
-    })
+    return new Response(0)
 }
