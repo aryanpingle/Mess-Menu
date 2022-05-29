@@ -1,6 +1,10 @@
 {
     "short_name": "Mess Menu",
     "name": "BPGC Mess Menu",
+    "start_url": "/index.html",
+    "background_color": "#121212",
+    "display": "standalone",
+    "theme_color": "#121212",
     "icons": [
 		{
 			"src": "/images/logo72.png",
@@ -86,9 +90,5 @@
 			"sizes": "720x720",
 			"purpose": "maskable"
 		}
-	],
-    "start_url": "/index.html",
-    "background_color": "#000000",
-    "display": "standalone",
-    "theme_color": "#000000"
+	]
 }
