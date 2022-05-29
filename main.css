@@ -112,17 +112,18 @@ body {
     font-weight: 800;
 }
 
-.day-choice.day-choice--selected::after {
+.day-choice.day-choice--today::after {
     background-color: #727272;
 }
 
-.day-choice.day-choice--today::after {
+.day-choice.day-choice--selected::after {
     background-color: hsl(195, 75%, 50%);
 }
 
 @media (min-width: 720px) {
     .day-choice {
         padding: 0 0.5em;
+        cursor: pointer;
     }
 
     .day-choice::after {
@@ -143,12 +144,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@media (min-width: 720px) {
-    .day-text {
-        cursor: pointer;
-    }
 }
 
 /* Actual Menu */
