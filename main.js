@@ -67,7 +67,7 @@ function everyday_item_html(item_name) {
 let menu = {
     "Monday": {
         "B": "Onion Poha + Sweet Curd",
-        "L": "Veg Handi Gravy, Cabbage Mattar Dry, Dal Makhani, Rice, Pickle, Chapati, Sweet Lassi, Papad",
+        "L": "Veg Handi Gravy, Soya Chilli Dry, Dal Tadka, Rice, Pickle, Chapati, Sweet Lassi, Papad",
         "S": "Vada Pav",
         "D": "Black Chana Gravy, Aloo Bhendi Dry, Dal Tomato, Jeera Rice, Chapati, Rassam, Salad"
     },
@@ -75,37 +75,37 @@ let menu = {
         "B": "Idli Sambar Chutney",
         "L": "Punjabi Chole, Aloo Jeera, Lasuni Dal, Rice, Pickle, Puri, Lime Juice, Kheer, Sirka Pyaaz",
         "S": "Bhelpuri",
-        "D": "Chawali Masala Gravy, Veg Manchurian Dry, Dal Kholapuri, Rice, Chapati, Rassam, Papad"
+        "D": "Chawali Masala Gravy, Beans Carrot Dry, Dal Kholapuri, Rice, Chapati, Rassam, Papad"
     },
     "Wednesday": {
         "B": "Aloo Paratha",
-        "L": "Veg Kofta Gravy, Soya Chilly Dry, Dal Masala, Rice, Chapati, Pickle, Curd, Mix Salad",
+        "L": "Veg Kofta Gravy, Cabbage Matar Dry, Dal Masala, Rice, Chapati, Pickle, Curd, Mix Salad",
         "S": "Masala Sandwich",
         "D": "Chicken Biryani, Paneer Biryani, Kaddu Masala, Dal Lasuni, Rice, Chapati, Pickle, Papad"
     },
     "Thursday": {
-        "B": "Veg Upma",
-        "L": "Kadi Pakoda, Aloo Capsicum Dry, Mix Dal, Jeera Rice, Pickle, Chapati, Tang, Fruit Custard, Papad",
-        "S": "Finger Chips",
-        "D": "Pindi Channa Gravy, Aloo Rasila Gravy, Dal Adraki, Veg Pulao, Chapati, Rassam, Salad + Onion"
+        "B": "Pav Bhaji / Puri Bhaji",
+        "L": "Mushroom Matar Gravy, Soya Dry, Dal Makhani, Jeera Rice, Pickle, Chapati, Butter Milk, Gulab Jamun, Moong Chana Salad",
+        "S": "Veg Maggi",
+        "D": "Pindi Chana Gravy, Aloo Methi Dry, Dal Adraki, Veg Pulao, Chapati, Rassam, Salad + Onion"
     },
     "Friday": {
-        "B": "Uttappa / Medhu Wada",
-        "L": "Veg Jalfrizi Gravy, Rajma Masala, Kaali Masoori Dal, Rice, Pickle, Chapati, Curd, Khaman Dhokla / Salad",
-        "S": "Veg Maggi",
-        "D": "Egg / Chicken Masala, Paneer Masala, Dudhi Channa Dry, Dal Tadka, Rice, Pickle, Paratha + Chapati, Boondi Raita, Papad"
+        "B": "Veg Upma / Medhu Wada",
+        "L": "Kadi Pakoda, Rajma Masala, Kaali Masoor Dal, Onion Rice, Pickle, Chapati, Curd, Khaman Dhokla / Salad",
+        "S": "Samosa",
+        "D": "Egg / Chicken Masala, Paneer Masala, Dudhi Channa Dry, Dal Tadka, Rice, Chapati, Pickle, Papad"
     },
     "Saturday": {
-        "B": "Puri Bhaji",
-        "L": "Veg Kholapuri Gravy, Soya Dry, Dal Tadka, Jeera Rice, Pickle, Chapati, Butter Milk, Kharari Boondi, Moong / Channa Salad",
+        "B": "Onion Uttappa",
+        "L": "Veg Jalfrizi Gravy, Aloo Capsicum, Mix Dal, Menti Rice, Pickle, Chapati, Tang, Fruit Custard, Papad",
         "S": "Dabeli",
-        "D": "Mix Usal Gravy, Mix Veg Dry, Sambar, Lemon Rice, Chapati, Dal Fry, Salad"
+        "D": "Mix Usal Gravy, Mix Veg Dry, Rassam, Lemon Rice, Chapati, Dal Fry, Salad"
     },
     "Sunday": {
         "B": "Chole Bhature",
-        "L": "Veg Kurma Gravy, Veg Biryani, Dal Fry, Rice, Pickle, Chapati, Jeera Raita, Fryums",
-        "S": "Bread Pakoda",
-        "D": "Green Peas Gravy, Onion Uttapam / Pav Bhaji, Dal Fry, Veg Noodles, Pickle, Chapati, Rice, Papad"
+        "L": "Veg Kurma Gravy, Veg Biryani, Dal Fry, Plain Rice, Pickle, Chapati, Veg Raita, Salad + Onion",
+        "S": "Veg Sandwich",
+        "D": "Green Peas Gravy, Veg Manchurian Dry, Dal Fry, Veg Fried Rice / Noodles, Chapati, Pickle, Papad"
     }
 }
 
