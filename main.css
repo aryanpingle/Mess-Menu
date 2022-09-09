@@ -157,6 +157,16 @@ body {
     overflow: auto;
 }
 
+@media (max-width: 719px) {
+    #actual-menu {
+        scrollbar-width: none;
+    }
+
+    #actual-menu::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 @media (min-width: 720px) {
     #actual-menu {
         --scrollbar-track-color: #242424;
