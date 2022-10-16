@@ -271,3 +271,23 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.footer {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #efefef;
+        font-size: 0.75em;
+        padding-top: 1em;
+        padding-bottom: 2em;
+    }
+
+    a {
+        color: hsl(180deg, 100%, 50%);
+    }
+}
