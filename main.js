@@ -69,7 +69,7 @@ let menu = {
         "B": "Aloo Pyaz / Mix Veg Paratha",
 		"L": "Veg Kurma, Black Chana Dry, Dal Makhani, Jeera Rice, Chapati, Rassam, Green Salad, Punjabi Lassi, Fryums, Gulab Jamun",
 		"S": "Veg Cutlet",
-		"D": "Baingan Bharta, Paner Butter Masala, Chicken / Egg Masala, Papaya / Banana, Dal Masala, Rice, Chapati + Paratha, Sambhar, Onion Salad, Curd"
+		"D": "Baingan Bharta, Paneer Butter Masala, Chicken / Egg Masala, Papaya / Banana, Dal Masala, Rice, Chapati + Paratha, Sambhar, Onion Salad, Curd"
     },
     "Tuesday": {
         "B": "Idli Sambhar",
