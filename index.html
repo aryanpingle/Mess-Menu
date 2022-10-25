@@ -5,6 +5,17 @@
         navigator.serviceWorker && navigator.serviceWorker.register("sw.js")
     </script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQTZ48NDYC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        if(!window.location.href.includes("127")) {
+            gtag('js', new Date());
+            gtag('config', 'G-XQTZ48NDYC');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -1,10 +1,10 @@
 const log = (text, color="rgb(128, 128, 128)") => self.registration.scope.includes("127") ? console.log(`%c${text}`, `color: black !important; background-color: ${color};`) : 0
 
-const APP_VERSION = 6.14
+const APP_VERSION = 6.15
 
 const DOC_CACHE_NAME = `DOC_CACHE`
 let DOC_CACHE = null
-const RES_CACHE_VERSION = 6.14
+const RES_CACHE_VERSION = 6.15
 const RES_CACHE_NAME = `RES_CACHEv${RES_CACHE_VERSION.toFixed(2)}`
 let RES_CACHE = null
 
@@ -43,6 +43,10 @@ self.addEventListener("fetch", event => {
 async function get_request(request_event) {
     const request = request_event.request
     const url = request.url
+
+    if(url.includes("/gtag/")) {
+        return fetch(request)
+    }
     
     if(RES_CACHE == null) {
         DOC_CACHE = await caches.open(DOC_CACHE_NAME)
