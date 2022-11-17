@@ -66,51 +66,51 @@ function everyday_item_html(item_name) {
 
 let menu = {
     "Monday": {
-        "B": "Aloo Pyaz / Mix Veg Paratha",
+        "B": "Mix Paratha",
 		"L": "Veg Kurma, Black Chana Dry, Dal Makhani, Jeera Rice, Chapati, Rassam, Green Salad, Punjabi Lassi, Fryums, Gulab Jamun",
-		"S": "Veg Cutlet",
-		"D": "Baingan Bharta, Paneer Butter Masala, Chicken / Egg Masala, Papaya / Banana, Dal Masala, Rice, Chapati + Paratha, Sambhar, Onion Salad, Curd"
+		"S": "Ragda Pattice",
+		"D": "Baingan Bharta, Kadhai Paneer, Chicken / Egg Masala, Seasonal Fruit, Dal Masala, Rice, Chapati + Paratha, Sambhar, Onion Salad, Boondi Raita"
     },
     "Tuesday": {
         "B": "Idli Sambhar",
-		"L": "Aloo Jeera, Chhole Amritsari, Dal Fry, Rice, Puri + Chapati, Sambhar, Macaroni Salad, Fresh Lime Water, Roasted Papad, Dry Fruit Shrikhand",
-		"S": "Vada Pav",
-		"D": "Veg Jalfrezi Gravy, Bhindi Masala, Yellow Dal, Veg Pulao, Chapati, Rassam, Kimchi Salad, Boondi Raita"
+		"L": "Aloo Jeera, Chhole Amritsari, Dal Fry, Rice, Puri + Chapati, Sambhar, Sirka Onion, Fresh Lime Water, Roasted Papad, Sewai / Rice Kheer",
+		"S": "Vada Sandwich",
+		"D": "Veg Kolhapuri, Bhindi Masala, Yellow Dal, Veg Pulao, Chapati, Rassam, Kimchi Salad, Curd"
     },
     "Wednesday": {
-        "B": "Onion Poha + Sev",
-		"L": "Dum Aloo Gravy, Soya Chilly Dry, Dal Masala, Jeera Rice, Chapati, Rassam, Mix Sprout Salad, Curd, Fryums, Dudhi Halwa / Moong Dal Halwa",
+        "B": "Poha + Sev",
+		"L": "Aloo Matar Gravy, Soya Chilly Dry, Dal Masala, Jeera Rice, Chapati, Rassam, Mix Sprout Salad, Curd, Fryums, Moong Dal Halwa / Boondi",
 		"S": "Kachori",
-		"D": "Green Chawli, Paneer Biryani, Chicken Biryani, Papaya / Banana, Dal Kolhapuri, Rice, Chapati, Sambhar, Tandoori Salad, Veg Raita"
+		"D": "Kaddu Masala, Paneer Biryani, Chicken Biryani, Seasonal Fruit, Dal Kolhapuri, Rice, Chapati, Sambhar, Tandoori Salad, Veg Raita"
     },
     "Thursday": {
-        "B": "Medu Wada",
-		"L": "Veg Kofta Gravy, Cabbage Sabzi Dry, Dal Makhani, Onion Rice, Chapati, Sambhar, Onion Cucumber Tomato Salad, Iced Tea, Roasted Papad, Rasmalai / Rasgulla",
+        "B": "Pav Bhaji / Puri Bhaji",
+		"L": "Veg Kofta Gravy, Cabbage Sabzi Dry, Lasooni Dal, Onion Rice, Chapati, Sambhar, Macaroni Salad, Buttermilk, Roasted Papad, Rasmalai / Jalebi Rabdi",
 		"S": "Samosa",
-		"D": "Manchurian (semi-dry), Pindi Chana, Manchow / Lemon Coriander Soup, Veg Fried Rice / Schezwan Noodles, Chapati, Rassam, Mix Salad, Curd"
+		"D": "Manchurian (semi-dry), Pindi Chana, Lemon Coriander Soup, Veg Fried Rice / Schezwan Noodles, Chapati, Rassam, Mix Salad, Curd"
     },
     "Friday": {
-        "B": "Pav Bhaji / Puri Bhaji",
-		"L": "Punjabi Rajma, Aloo Methi, Dal Kohlapuri, Rice, Chapati, Rassam, Tossed Salad, Curd, Fryums, Balushahi",
-		"S": "Onion Pakoda",
-		"D": "Besan Gatta Gravy, Paneer Tikka Masala / Paneer Kadhai, Egg Curry, Papaya / Banana, Dal Tadka, Rice, Chapati, Sambhar, Green Salad, Boondi Raita"
+        "B": "Medu Wada",
+		"L": "Punjabi Rajma, Aloo Methi, Dal Kohlapuri, Rice, Chapati, Rassam, Tossed Salad, Curd, Fryums, Fruit Custard",
+		"S": "Vada Pav",
+		"D": "Doodhi Channa, Paneer Bhurji, Egg Bhurji, Seasonal Fruit, Dal Tadka, Rice, Chapati, Sambhar, Green Salad, Boondi Raita"
     },
     "Saturday": {
-        "B": "Masala Dosa",
-		"L": "Malai Kofta Gravy, Soya Dry, Dal Jeera Fry, Rice, Chapati, Sambhar, Chana Tomato Onion Salad, Jaljeera, Roasted Papad, Jalebi Rabdi",
-		"S": "French Fries",
-		"D": "Sev Tamatar, Aloo Rasila, Dal Maharaja, Mint Rice, Chapati, Kokam Rassam, Moong Salad, Curd"
+        "B": "Onion Utappa",
+		"L": "Malai Kofta Gravy, Soya Dry, Dal Jeera Fry, Rice, Chapati, Sambhar, Chana Tomato Onion Salad, Kokum Sharbet, Roasted Papad, Pineapple Sheera",
+		"S": "Dabeli",
+		"D": "Sev Tamatar, Aloo Rasila, Dal Tadka, Mint Rice, Chapati, Kokam Rassam, Moong Salad, Curd"
     },
     "Sunday": {
         "B": "Chole Bhature",
-		"L": "Methi Matar Malai, Kurkuri Bhindi, Kadhi, Dum Veg Biryani, Chapati, Rassam, Papdi Chaat, Jeera Raita, Fried Papad",
+		"L": "Corn Palak, Kurkuri Bhindi, Kadhi, Dum Veg Biryani, Chapati, Rassam, Green Salad, Jeera Raita, Fried Papad",
 		"S": "Schezwan Roll",
-		"D": "Pani Puri, Misal Pav + Farsan, Veg Kurma, Masala Khichdi, Chapati, Choco Bite, Mix Salad, Curd"
+		"D": "Papdi Chaat / Corn Tikki, Misal Pav + Farsan, Veg Kurma, Masala Khichdi, Chapati, Ice Cream Scoop, Mix Salad, Curd"
     }
 }
 
 var everyday = {
-    "B": "Tea + Coffee, Boiled Egg / Omelette, Bread + Jam, Bournvita, Hot + Cold Milk, Cornflakes",
+    "B": "Tea + Coffee, Boiled Egg / Omelette, Bread + Butter + Jam, Bournvita, Hot + Cold Milk, Cornflakes",
     "L": "",
     "S": "Tea + Coffee",
     "D": ""
