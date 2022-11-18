@@ -81,7 +81,7 @@ let menu = {
         "B": "Poha + Curd + Sev",
 		"L": "Aloo Matar Gravy, Soya Chilly Dry, Dal Masala, Jeera Rice, Chapati, Rassam, Mix Sprout Salad, Curd, Fryums, Moong Dal Halwa / Boondi",
 		"S": "Kachori",
-		"D": "Kaddu Masala, Paneer Biryani, Chicken Biryani, Seasonal Fruit, Dal Kolhapuri, Rice, Chapati, Sambhar, Tandoori Salad, Veg Raita"
+		"D": "Kaddu Masala, Paneer/Chicken Biryani, Seasonal Fruit, Dal Kolhapuri, Rice, Chapati, Sambhar, Tandoori Salad, Veg Raita"
     },
     "Thursday": {
         "B": "Pav Bhaji / Puri Bhaji",
