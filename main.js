@@ -110,7 +110,7 @@ let menu = {
 }
 
 var everyday = {
-    "B": "Tea + Coffee, Boiled Egg / Omelette, Bread + Butter + Jam, Bournvita, Hot + Cold Milk, Cornflakes",
+    "B": "Tea + Coffee, Boiled Egg, Omelette, Bread + Butter + Jam, Bournvita, Hot + Cold Milk, Cornflakes",
     "L": "",
     "S": "Tea + Coffee",
     "D": ""
