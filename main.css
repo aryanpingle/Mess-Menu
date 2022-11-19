@@ -174,7 +174,7 @@ body {
         width: 100%;
         flex-direction: row;
         align-items: center;
-        font-size: 1.25em;
+        font-size: 0.9em;
         padding: 0;
 
         scroll-behavior: smooth;
