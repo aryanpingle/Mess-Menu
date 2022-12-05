@@ -75,11 +75,11 @@ let menu = {
         "B": "Idli Sambhar",
 		"L": "Aloo Jeera, Chhole Amritsari, Dal Fry, Rice, Puri + Chapati, Sambhar, Sirka Onion, Fresh Lime Water, Roasted Papad, Sewai / Rice Kheer",
 		"S": "Veg Sandwich",
-		"D": "Veg Kolhapuri, Bhindi Masala, Yellow Dal, Veg Pulao, Chapati, Rassam, Kimchi Salad, Curd"
+		"D": "Bhindi Masala, Papdi / Samosa Chaat, Yellow Dal, Veg Pulao, Chapati, Rassam, Cucumber Tomato Salad, Curd"
     },
     "Wednesday": {
-        "B": "Poha + Curd + Sev",
-		"L": "Aloo Matar Gravy, Soya Chilly Dry, Dal Masala, Jeera Rice, Chapati, Rassam, Mix Sprout Salad, Curd, Fryums, Moong Dal Halwa / Boondi",
+        "B": "Masala Sandwich / Poha",
+		"L": "Aloo Matar Gravy, Black Chana Dry, Dal Masala, Jeera Rice, Chapati, Rassam, Mix Sprout Salad, Curd, Fryums, Rasgulla / Rasmalai",
 		"S": "Kachori",
 		"D": "Tindli, Paneer Biryani, Chicken Biryani, Seasonal Fruit, Dal Kolhapuri, Rice, Chapati, Sambhar, Kimchi Salad, Boondi Raita"
     },
