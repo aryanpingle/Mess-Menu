@@ -47,6 +47,53 @@ function setup() {
             initialize_menu()
         }
     })
+
+    if(!!navigator.share) {
+        [...document.querySelectorAll(".share_toolbar")].forEach(toolbar => {
+            toolbar.querySelector(".share--text").onclick = function(event) {
+                initiateShareText(toolbar.getAttribute("data-meal-category-id"))
+            }
+        })
+    }
+    else {
+        console.error("Device does not support sharing")
+    }
+}
+
+/**
+ * Initiates sharing of the SS of the given meal category
+ * @param {string} mealCategoryID 
+ */
+function initiateShareText(mealCategoryID) {
+    let mealCategoryName = {
+        "B": "Breakfast",
+        "L": "Lunch",
+        "S": "Snacks",
+        "D": "Dinner"
+    }[mealCategoryID.toUpperCase()]
+
+    navigator.share({
+        text: generateReadableMenu(mealCategoryID),
+        title: `${mealCategoryName} ${new Date().toDateString()}`,
+    })
+}
+
+function generateReadableMenu(mealCategoryID) {
+    let mealCategoryName = {
+        "B": "Breakfast",
+        "L": "Lunch",
+        "S": "Snacks",
+        "D": "Dinner"
+    }[mealCategoryID]
+
+    let items = []
+
+    let mealCategoryElement = document.querySelector("#" + mealCategoryID)
+    mealCategoryElement.querySelectorAll(".menu__item").forEach(item => {
+        items.push(item.innerText)
+    })
+
+    return `*🍴 ${mealCategoryName.toUpperCase()} 🍴*\n\n` + items.join("\n")
 }
 
 function initialize_menu() {

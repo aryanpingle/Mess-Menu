@@ -13,6 +13,15 @@
     box-sizing: border-box;
 }
 
+button {
+    font-family: inherit;
+    background-color: inherit;
+    outline: none;
+    border: none;
+    color: inherit;
+    font-size: 1em;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -194,15 +203,16 @@ body {
     }
 }
 
-#B {--accent: var(--breakfast-accent);}
-#L {--accent: var(--lunch-accent);}
-#S {--accent: var(--snacks-accent);}
-#D {--accent: var(--dinner-accent);}
+#B, #B + .share_toolbar {--accent: var(--breakfast-accent); --accent-hue: 20;}
+#L, #L + .share_toolbar {--accent: var(--lunch-accent); --accent-hue: 157;}
+#S, #S + .share_toolbar {--accent: var(--snacks-accent); --accent-hue: 45;}
+#D, #D + .share_toolbar {--accent: var(--dinner-accent); --accent-hue: 195;}
 
 .menu-category {
     color: var(--accent);
     background-color: inherit;
     padding: 1em;
+    padding-bottom: 0.5em;
 }
 
 @media (min-width: 720px) {
@@ -264,6 +274,41 @@ body {
 .menu__item--everyday {
     opacity: 0.8;
 }
+
+/* Share Toolbars */
+
+.share_toolbar {
+    width: auto;
+    padding: 0.25rem 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: hsl(var(--accent-hue), 25%, 50%);
+    color: #888;
+}
+
+.share_button {
+    margin-left: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    color: #aaa;
+}
+
+.share_button img {
+    filter: invert(1);
+    opacity: 0.785;
+    height: 1em;
+    width: auto;
+}
+
+/* Footer */
 
 .footer {
     display: none;
