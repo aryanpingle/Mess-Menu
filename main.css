@@ -308,6 +308,12 @@ body {
     width: auto;
 }
 
+@media (min-width: 720px) {
+    .share_toolbar {
+        display: none;
+    }
+}
+
 /* Footer */
 
 .footer {
