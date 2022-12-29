@@ -265,13 +265,6 @@ body {
     opacity: 0.8;
 }
 
-.category {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .footer {
     display: none;
 }
