@@ -6,6 +6,14 @@ let DEFERRED_INSTALL_PROMPT = null
 let selected_day = 0
 
 function setup() {
+    // PWA Analytics
+    if(navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches) {
+        gtag("event", "pwa_use", {
+            "event_category": "engagement",
+            "value": 1
+        })
+    }
+
     // new Date().getDay() returns 1 for Monday, 0/7 for Sunday
     selected_day = (new Date().getDay() + 6) % 7
     
