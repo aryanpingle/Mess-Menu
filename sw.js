@@ -1,10 +1,10 @@
 const log = (text, color="rgb(128, 128, 128)") => self.registration.scope.includes("127") ? console.log(`%c${text}`, `color: black !important; background-color: ${color};`) : 0
 
-const APP_VERSION = 6.21
+const APP_VERSION = 6.22
 
 const DOC_CACHE_NAME = `DOC_CACHE`
 let DOC_CACHE = null
-const RES_CACHE_VERSION = 6.21
+const RES_CACHE_VERSION = 6.22
 const RES_CACHE_NAME = `RES_CACHEv${RES_CACHE_VERSION.toFixed(2)}`
 let RES_CACHE = null
 
