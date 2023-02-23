@@ -42,7 +42,7 @@ self.addEventListener("fetch", event => {
 
 async function get_request(request_event) {
     const request = request_event.request
-    const url = request.url
+    const url = new URL(request.url).origin + new URL(request.url).pathname
 
     if(url.includes("/gtag/")) {
         return fetch(request)
@@ -53,19 +53,18 @@ async function get_request(request_event) {
         RES_CACHE = await caches.open(RES_CACHE_NAME)
     }
 
+    if(url.includes("menu.json")) {
+        let menu = await getMenu(request_event)
+        return menu
+    }
+
     if(url.endsWithAny(".js", ".html", ".css", "/", "manifest.json")) {
         log(`DOC: ${url}`)
         // Check if cached version exists
-        let cache_match = await DOC_CACHE.match(request)
+        let cache_match = await DOC_CACHE.match(request, { ignoreVary: true })
         if(cache_match) {
-            // First perform network fetch in background
-            let abort_controller = new AbortController()
-            let signal = abort_controller.signal
-            let timeout_id = setTimeout(() => abort_controller.abort(), 5000)
-            fetch(request, {signal: signal}).then(response => {
-                clearTimeout(timeout_id)
-                DOC_CACHE.put(request, response)
-            }).catch(err => err)
+            // Perform network match in the background
+            networkFetchAndSave(request, DOC_CACHE)
 
             // Return the cached version
             return cache_match
@@ -74,8 +73,7 @@ async function get_request(request_event) {
             log(`${url} wasn't in cache, so doing fetch`, "yellow")
             // Nothing in cache, perform basic fetch request
             return fetch(request).then(response => {
-                let clone = response.clone()
-                DOC_CACHE.put(request, clone)
+                saveResponse(request, response, DOC_CACHE)
                 return response
             })
         }
@@ -91,11 +89,120 @@ async function get_request(request_event) {
         
         // log(`${url} wasn't in cache, so doing fetch`)
         return fetch(request).then(response => {
-            let clone = response.clone()
-            RES_CACHE.put(request, clone)
+            saveResponse(request, response, RES_CACHE)
             return response
         })
     }
 
     return new Response(0)
+}
+
+/**
+ * @param {Event} request_event 
+ */
+async function getMenu(request_event) {
+    const request = request_event.request
+    const url = request.url
+
+    if(RES_CACHE == null) {
+        DOC_CACHE = await caches.open(DOC_CACHE_NAME)
+        RES_CACHE = await caches.open(RES_CACHE_NAME)
+    }
+
+    // Check if AbortController is supported
+    if(AbortController !== undefined) {
+        // AbortController is supported, begin network fetch
+        let abort_controller = new AbortController()
+        let signal = abort_controller.signal
+        let timeout_id = setTimeout(() => abort_controller.abort(), 2500)
+        let menu = await fetch(request, {signal: signal}).then(response => {
+            if(response.status == 404) throw new Error()
+
+            return response
+        }).then(response => {
+            /* Network Match succeeded */
+
+            // Clear the abort timeout
+            clearTimeout(timeout_id)
+
+            saveResponse(request, response, RES_CACHE)
+
+            // Return network match
+            log("(menu) network fetch succeeded", "rgb(128, 255, 128)")
+            return response
+        }).catch(async err => {
+            log("(menu) could not fetch in time", "rgb(255, 128, 128)")
+
+            // Perform network request in the background
+            networkFetchAndSave(request, RES_CACHE)
+
+            /* Try for cache match */
+            let cache_match = await RES_CACHE.match(request, {ignoreVary: true})
+
+            if(cache_match) {
+                log("(menu) Got from cache", "rgb(128, 128, 255)")
+            }
+
+            return cache_match
+        })
+
+        // Return the cached version
+        return menu
+    }
+
+    // At this point we know AbortController is not supported
+
+    return await fetch(request).then(response => {
+        if(response.status == 404) throw new Error()
+
+        return response
+    }).then(response => {
+        /* Network Match succeeded */
+
+        saveResponse(request, response, RES_CACHE)
+
+        // Return network match
+        log("(menu) network fetch succeeded", "rgb(128, 255, 128)")
+        return response
+    }).catch(async err => {
+        log("could not fetch menu in time", "rgb(255, 128, 128)")
+
+        // Perform network request in the background
+        networkFetchAndSave(request, RES_CACHE)
+
+        /* Try for cache match */
+        let cache_match = await RES_CACHE.match(request, {ignoreVary: true})
+
+        if(cache_match) {
+            log("Got a valid cache match", "rgb(128, 128, 255)")
+        }
+
+        return cache_match
+    })
+}
+
+/**
+ * Saves a copy of the response to the given cache
+ * @param {Request} request 
+ * @param {Response} request 
+ * @param {Cache} cache 
+ */
+function saveResponse(request, response, cache) {
+    let clone = response.clone()
+    cache.put(request, clone)
+}
+
+/**
+ * Performs a network fetch for the request and saves it to the given cache
+ * Asynchronously handled, so you can call this function and forget about it
+ * @param {Request} request 
+ * @param {Cache} cache 
+ */
+function networkFetchAndSave(request, cache) {
+    fetch(request).then(response => {
+        if(response.status == 404) return undefined
+        if(!response) return undefined
+
+        cache.put(request, response)
+    }).catch(err => err)
 }
