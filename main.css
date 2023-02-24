@@ -275,6 +275,23 @@ body {
     opacity: 0.8;
 }
 
+.menu__item--loading {
+    margin: 10px;
+    color: transparent;
+    background-color: var(--accent);
+
+    animation: loading 500ms ease alternate infinite;
+}
+
+@keyframes loading {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 0.05;
+    }
+}
+
 /* Share Toolbars */
 
 .share_toolbar {
