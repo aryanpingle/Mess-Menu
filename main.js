@@ -8,8 +8,11 @@ let selected_day = 0
 let menu = null
 
 async function setup() {
-    menu = await fetch("./menu.json").then(d => d.json())
-    convertMenu()
+    fetch("./menu.json").then(d => d.json()).then(data => {
+        menu = data
+        convertMenu()
+        initialize_menu()
+    })
 
     // PWA Analytics
     if(navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches) {
@@ -24,7 +27,6 @@ async function setup() {
     
     // Set the current day and select it
     document.querySelector(".day-picker").children[selected_day].classList.add("day-choice--today", "day-choice--selected")
-    initialize_menu()
 
     // Jump to the current time in the day
     const current_hours = new Date().getHours()
