@@ -8,12 +8,12 @@
     "Tuesday": {
         "B": "Idli Sambhar",
 		"L": "Aloo Jeera, Chhole Amritsari, Dal Fry, Rice, Puri + Chapati, Sambhar, Sirka Onion, Fresh Lime Water, Roasted Papad, Sewai Kheer",
-		"S": "Maggi",
+		"S": "Bhel Puri",
 		"D": "Chawali Masala, Samosa / Papdi Chaat, Dal Fry, Rice, Chapati, Rassam, Mix Salad, Curd"
     },
     "Wednesday": {
         "B": "Poha",
-		"L": "Aloo Baingan Sabzi, Besan Gatta Gravy, Dal Masala, Rice, Chapati, Rassam, Green Salad, Curd, Fried Papad, Rasgulla / Shahi Tukda",
+		"L": "Aloo Baingan Sabzi, Besan Gatta Gravy, Dal Masala, Rice, Chapati, Rassam, Green Salad, Curd, Fried Papad, Angoor Rabdi / Shahi Tukda",
 		"S": "Vada Pav",
 		"D": "Paneer Biryani, Chicken Biryani, Aloo Matar, Papaya, Dal Palak, Rice, Chapati, Sambhar, Kimchi Salad, Veg Raita"
     },
@@ -21,13 +21,13 @@
         "B": "Puri Bhaji",
 		"L": "Veg Kofta, Dhokla + Chutney, Lasooni Dal, Tomato Rice, Chapati, Sambhar, Chana Salad, Orange Tang, Roasted Papad, Jalebi Rabdi",
 		"S": "French Fries",
-		"D": "Veg Kolhapuri, Manchurian semi-dry, Fried Rice / Noodles, Lemon Coriander Soup, Chapati, Rassam, Cucumber + Tomato Salad, Curd"
+		"D": "Veg Kolhapuri, Manchurian semi-dry, Fried Rice / Noodles, Manchow Soup, Chapati, Rassam, Cucumber + Tomato Salad, Curd"
     },
     "Friday": {
-        "B": "Medu Wada",
+        "B": "Misal Pav",
 		"L": "Punjabi Rajma, Stuffed Bhindi, Dal Kolhapuri, Rice, Chapati, Rassam, Moong Salad, Curd, Fryums, Moongdal Halwa / Pineapple Sheera",
 		"S": "Samosa",
-		"D": "Palak Matar, Paneer Bhurji / Tikka Masala, Egg Bhurji, Watermelon, Akha Masoor, Rice, Chapati, Sambhar, Sirka Pyaaz, Boondi Raita"
+		"D": "Palak Matar, Paneer Bhurji / Tikka Masala, Egg Curry / Bhurji, Watermelon, Akha Masoor, Rice, Chapati, Sambhar, Sirka Pyaaz, Boondi Raita"
     },
     "Saturday": {
         "B": "Onion Uttapam",
@@ -37,8 +37,8 @@
     },
     "Sunday": {
         "B": "Masala Dosa",
-		"L": "Dahi Bhalle + Chutney, Kurkuri Bhindi, Dal Fry, Dum Veg Biryani, Chapati, Rassam, Chana Tomato Onion Salad, Veg Raita, Roasted Papad",
-		"S": "Schezwan Roll",
+		"L": "Dahi Bhalle + Chutney, Onion Pakoda, Dal Fry, Veg Biryani, Plain Rice, Chana Tomato Onion Salad, Veg Raita, Roasted Papad",
+		"S": "Dabeli",
 		"D": "Pani Puri, Chhole Bhature, Dal Fry, Masala Khichdi, Chapati, Ice Cream, Mix Salad, Curd"
     }
 }
