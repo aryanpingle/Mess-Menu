@@ -13,32 +13,32 @@
     },
     "Wednesday": {
         "B": "Idli Sambhar",
-		"L": "Punjabi Rajma, Stuffed Bhindi, Dal Masala, Jeera Rice, Chapati, Rasam, Chana Tomato Onion Salad, Curd, Fryums, Rasmalai / Balushai",
+		"L": "Punjabi Rajma, Stuffed Bhindi, Dal Masala, Jeera Rice, Chapati, Rasam, Chana Tomato Onion Salad, Fryums, Curd, Rasmalai / Balushai",
 		"S": "Kachori",
 		"D": "Green Chawli, Paneer Biryani, Chicken Biryani, Dal Palak, Rice, Chapati, Sambhar, Banana, Kimchi Salad, Veg Raita"
     },
     "Thursday": {
         "B": "Onion Poha",
-		"L": "Malai Kofta Gravy, Chilli Soya Dry, Dal Makhani, Onion Rice, Chapati, Sambhar, Onion Cucumber Tomato salad, Fresh Lime Water, Roasted Papad, Fruit Custard",
+		"L": "Malai Kofta Gravy, Chilli Soya Dry, Dal Makhani, Onion Rice, Chapati, Sambhar, Onion Cucumber Tomato Salad, Fresh Lime Water, Roasted Papad, Fruit Custard",
 		"S": "Samosa",
 		"D": "Pindi Chana, Veg Handi Gravy, Papdi / Samosa Chat, Dal Kolapuri, Rice, Chapati, Rasam, Mix Salad, Veg Raita"
     },
     "Friday": {
         "B": "Medu Wada",
-		"L": "Cabbage Sabzi Dry, Veg Kolhapuri, Kadhi Pakoda, Rice, Chapati, Rasam, Tossed salad, Curd, Fryums, Angoor Rabdi / Shahi Tukda",
+		"L": "Cabbage Sabzi Dry, Veg Kolhapuri, Kadhi Pakoda, Rice, Chapati, Rasam, Tossed Salad, Fryums, Curd, Angoori Rabdi / Shahi Tukda",
 		"S": "Vada Pav",
 		"D": "Besan Gatta Gravy, Paneer Tikka Masala / Kadhai, Egg Curry, Banana, Dal Tadka, Rice, Chapati, Sambhar, Green Salad, Boondi Raita"
     },
     "Saturday": {
         "B": "Masala Dosa",
 		"L": "Veg Handi Gravy, Soya Dry, Dal Tadka, Rice, Chapati, Sambhar, Mix Veg Salad, Buttermilk, Roasted Papad, Cream Jamun",
-		"S": "Kachori",
+		"S": "French Fries",
 		"D": "Pav Bhaji, Veg Kofta, Curd Rice w/ Tadka, Rice, Chapati, Kokam Rasam, Kimchi Salad"
     },
     "Sunday": {
         "B": "Bread Pakoda",
 		"L": "Methi Matar Malai, Dahi Bhalle + Chutney, Onion Pakoda, Dal Fry, Dum Veg Biryani, Rasam, Chapati, Veg Raita, Fried Papad",
 		"S": "Maggi",
-		"D": "Tomato Capsicum Uttapam, Chhole Bhature + Onion, Aloo Matar Gravy, Veg Pulao, Chapati, Choco Bite, Mix Salad, Curd"
+		"D": "Tomato Capsicum Uttapam, Chhole Bhature + Onion, Aloo Matar Gravy, Veg Pulao, Chapati, Mix Salad, Curd, Choco Bite"
     }
 }
