@@ -2,7 +2,7 @@
     "Monday": {
         "B": "Aloo Paratha",
 		"L": "Mix Veg, Black Chana Dry, Dal Tadka, Jeera Rice,Chapati, Rasam, Green Salad, Punjabi Lassi, Fryums, Gulab Jamun",
-		"S": "Aloo Tikki w/ Chutney",
+		"S": "Aloo Tikki + Chutney",
 		"D": "Paneer Butter Masala, Chicken / Egg Curry, Banana, Dal Masala, Rice, Chapati + Paratha, Sambhar, Onion Salad, Curd"
     },
     "Tuesday": {
@@ -37,8 +37,8 @@
     },
     "Sunday": {
         "B": "Bread Pakoda",
-		"L": "Methi Matar Malai, Dahi bhalle w/ Chutney, Onion Pakoda, Dal Fry, Dum Veg Biryani, Rasam, Chapati, Veg Raita, Fried Papad",
+		"L": "Methi Matar Malai, Dahi Bhalle + Chutney, Onion Pakoda, Dal Fry, Dum Veg Biryani, Rasam, Chapati, Veg Raita, Fried Papad",
 		"S": "Maggi",
-		"D": "Tomato Capsicum Uttapam, Chhole Bhature w/ Onion, Aloo Matar Gravy, Veg Pulao, Chapati, Choco Bite, Mix Salad, Curd"
+		"D": "Tomato Capsicum Uttapam, Chhole Bhature + Onion, Aloo Matar Gravy, Veg Pulao, Chapati, Choco Bite, Mix Salad, Curd"
     }
 }
