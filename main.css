@@ -159,7 +159,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 0.5em;
+    /* padding: 0.5em; */
     
     background-color: inherit;
     overflow: auto;
@@ -168,6 +168,11 @@ body {
 @media (max-width: 719px) {
     #actual-menu {
         scrollbar-width: none;
+    }
+
+    #actual-menu > :not(.footer) {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
     }
 
     #actual-menu::-webkit-scrollbar {
@@ -352,3 +357,45 @@ body {
         color: hsl(180deg, 100%, 50%);
     }
 }
+
+.donations {
+    font-size: 0.9em;
+    background-color: #242424;
+    padding: 1.5em;
+}
+
+.donation-cta {
+    color: #ddd;
+    display: inline-block;
+    text-align: center;
+
+    margin-bottom: 1em;
+}
+
+.donation-button-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.donation-button {
+    text-decoration: none !important;
+    flex: 1 0 0;
+    text-align: center;
+    background-color: hsl(150, 50%, 50%);
+    font-weight: 700;
+    color: black;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+/* <div class="donations" style="margin-bottom: 1.5em;">
+                    <span>If you like my apps, you can support me by funding my coffee addiction:</span>
+                    <div class="donation-button-container">
+                        <div class="donation-button">Rs. 1</div>
+                        <div class="donation-button">Rs. 5</div>
+                        <div class="donation-button">Rs. 10</div>
+                        <div class="donation-button">Other</div>
+                    </div>
+                </div> */
