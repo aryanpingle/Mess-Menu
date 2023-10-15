@@ -55,15 +55,6 @@ body {
     }
 }
 
-/* Mess Period */
-
-.mess-period {
-    text-align: center;
-    font-size: 0.5em;
-    padding-top: 0.5em;
-    color: grey;
-}
-
 /* Day Picker */
 
 .day-picker {
