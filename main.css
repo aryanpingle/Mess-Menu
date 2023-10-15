@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
 :root {
-    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+    font-family: 'Young Serif', serif;
     font-size: 25px;
+    --hue-breakfast: 20;
+    --hue-lunch: 157;
+    --hue-snacks: 45;
+    --hue-dinner: 195;
     --breakfast-accent: hsl(20, 65%, 50%);
     --lunch-accent: hsl(157, 65%, 50%);
     --snacks-accent: hsl(45, 65%, 50%);
@@ -159,7 +163,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 0.5em;
+    /* padding: 0.5em; */
     
     background-color: inherit;
     overflow: auto;
@@ -202,16 +206,28 @@ body {
     }
 }
 
-#B, #B + .share_toolbar {--accent: var(--breakfast-accent); --accent-hue: 20;}
-#L, #L + .share_toolbar {--accent: var(--lunch-accent); --accent-hue: 157;}
-#S, #S + .share_toolbar {--accent: var(--snacks-accent); --accent-hue: 45;}
-#D, #D + .share_toolbar {--accent: var(--dinner-accent); --accent-hue: 195;}
+#B, #B + .share_toolbar {
+    --accent-hue: var(--hue-breakfast);
+    --accent: var(--breakfast-accent);
+}
+#L, #L + .share_toolbar {
+    --accent-hue: var(--hue-lunch);
+    --accent: var(--lunch-accent);
+}
+#S, #S + .share_toolbar {
+    --accent-hue: var(--hue-snacks);
+    --accent: var(--snacks-accent);
+}
+#D, #D + .share_toolbar {
+    --accent-hue: var(--hue-dinner);
+    --accent: var(--dinner-accent);
+}
 
 .menu-category {
     color: var(--accent);
     background-color: inherit;
-    padding: 1em;
     padding-bottom: 0.5em;
+    padding-top: 0.5em;
 }
 
 @media (min-width: 720px) {
@@ -232,8 +248,13 @@ body {
 .menu-category-inner {
     position: relative;
     background-color: inherit;
-    border: 4px solid var(--accent);
-    border-radius: 10px;
+    border: 1px solid var(--accent);
+    border-radius: 1em;
+    margin: 0 0.5rem;
+}
+
+.menu-category-inner > * {
+    padding: 1rem 1rem;
 }
 
 @media (min-width: 720px) {
@@ -243,31 +264,34 @@ body {
 }
 
 .menu-category__header {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    height: auto;
     text-transform: uppercase;
-    font-size: 1.75em;
-    font-weight: 700;
-    line-height: 100%;
     color: var(--accent);
-    padding: 0 0.25em;
-    background-color: inherit;
+
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: auto;
+    text-align: center;
+
+    border-bottom: 1px solid var(--accent);
 }
 
-.menu__items {
-    padding-top: 1em;
-    padding-bottom: 0.5em;
+.meal-name {
+    font-weight: 700;
+    letter-spacing: 0.3em;
+}
+
+.meal-timing {
+    opacity: 0.75;
+    display: inline-block;
+    font-weight: 200;
+    font-size: 0.5em;
 }
 
 .menu__item {
     text-align: center;
-    font-weight: 800;
+    font-weight: 600;
+    font-weight: 300;
     filter: saturate(0.9);
-    padding: 0.333em;
 }
 
 .menu__item--everyday {
@@ -291,45 +315,6 @@ body {
     }
 }
 
-/* Share Toolbars */
-
-.share_toolbar {
-    width: auto;
-    padding: 0.25rem 1rem;
-    padding-bottom: 1rem;
-    font-size: 0.5em;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: hsl(var(--accent-hue), 25%, 50%);
-    color: #888;
-}
-
-.share_button {
-    margin-left: 0.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #aaa;
-    border-radius: 10px;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    color: #aaa;
-}
-
-.share_button img {
-    filter: invert(1);
-    opacity: 0.785;
-    height: 1em;
-    width: auto;
-}
-
-@media (min-width: 720px) {
-    .share_toolbar {
-        display: none;
-    }
-}
-
 /* Footer */
 
 .footer {
@@ -342,7 +327,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: #efefef;
+        color: #e2e2e2;
         font-size: 0.75em;
         padding-top: 1em;
         padding-bottom: 2em;

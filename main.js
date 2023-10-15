@@ -12,6 +12,26 @@ async function setup() {
         menu = data
         convertMenu()
         initialize_menu()
+
+        // Jump to the current time in the day
+        const current_hours = new Date().getHours()
+        let scrollAmt = - document.querySelector(".day-picker").offsetHeight
+        if(current_hours < 10) {
+            // Already at #B
+        }
+        else if(current_hours < 14) {
+            // Jump to #L
+            scrollAmt += document.querySelector("#L").offsetTop
+        }
+        else if(current_hours < 18) {
+            // Jump to #S
+            scrollAmt += document.querySelector("#S").offsetTop
+        }
+        else if(current_hours < 22) {
+            // Jump to #D
+            scrollAmt += document.querySelector("#D").offsetTop
+        }
+        document.querySelector("#actual-menu").scrollTo(0, scrollAmt)
     })
 
     // PWA Analytics
@@ -24,29 +44,8 @@ async function setup() {
 
     // new Date().getDay() returns 1 for Monday, 0/7 for Sunday
     selected_day = (new Date().getDay() + 6) % 7
-    
     // Set the current day and select it
     document.querySelector(".day-picker").children[selected_day].classList.add("day-choice--today", "day-choice--selected")
-
-    // Jump to the current time in the day
-    const current_hours = new Date().getHours()
-    let scrollAmt = - (20 + document.querySelector(".day-picker").offsetHeight)
-    if(current_hours < 10) {
-        // Already at #B
-    }
-    else if(current_hours < 14) {
-        // Jump to #L
-        scrollAmt += document.querySelector("#L").offsetTop
-    }
-    else if(current_hours < 18) {
-        // Jump to #S
-        scrollAmt += document.querySelector("#S").offsetTop
-    }
-    else if(current_hours < 22) {
-        // Jump to #D
-        scrollAmt += document.querySelector("#D").offsetTop
-    }
-    document.querySelector("#actual-menu").scrollTo(0, scrollAmt)
 
     // Setup the day choice buttons
     document.querySelectorAll(".day-choice").forEach((day_choice, index) => {
