@@ -219,8 +219,7 @@ body {
     font-size: 1.2em;
     color: var(--accent);
     background-color: inherit;
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
+    padding-top: 1em;
 }
 
 @media (min-width: 720px) {
@@ -313,22 +312,23 @@ body {
 /* Footer */
 
 .footer {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #e2e2e2;
+    font-size: 0.75em;
+    padding-top: 1em;
+    margin-top: 1em;
+    padding-bottom: 2em;
 }
 
-@media (max-width: 720px) {
-    .footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #e2e2e2;
-        font-size: 0.75em;
-        padding-top: 1em;
-        padding-bottom: 2em;
-    }
+a {
+    color: hsl(180deg, 100%, 50%);
+}
 
-    a {
-        color: hsl(180deg, 100%, 50%);
-    }
+@media (min-width: 720px) {
+    .footer {
+        display: none;
+    }    
 }
