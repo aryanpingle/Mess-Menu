@@ -110,7 +110,7 @@ body {
 }
 
 .day-choice.day-choice--selected {
-    background-color: #484848;
+    background-color: #242424;
     font-weight: 800;
 }
 
@@ -242,12 +242,12 @@ body {
     position: relative;
     background-color: inherit;
     border: 1px solid var(--accent);
-    border-radius: 1em;
+    border-radius: 0.5em;
     margin: 0 0.5rem;
 }
 
 .menu-category-inner > * {
-    padding: 1rem 1rem;
+    padding: 0.5rem;
 }
 
 @media (min-width: 720px) {
@@ -283,10 +283,10 @@ body {
 
 .menu__item {
     text-align: center;
-    font-weight: 600;
-    font-weight: 300;
+    font-weight: 100;
+    font-size: 0.8em;
     filter: saturate(0.9);
-    line-height: 150%;
+    line-height: 2;
 }
 
 .menu__item--everyday {
