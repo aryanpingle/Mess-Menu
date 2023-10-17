@@ -3,28 +3,28 @@
         "B": "Onion + Tomato Uttapam",
 		"L": "Black Chana Gravy, Veg Kurma, Dal Tadka, Jeera Rice, Chapati, Rassam, Green Salad, Punjabi Lassi, Fryums, Gulab Jamun",
 		"S": "Samosa",
-		"D": "Paneer Butter Masala, Chicken Curry, Fruit, Baingan Bharta, Dal Masala, Rice, Chapati, Sambhar, Onion Salad, Boondi Raita"
+		"D": "Paneer Butter Masala, Chicken / Egg Curry, Fruit, Baingan Bharta, Dal Masala, Rice, Chapati, Sambhar, Onion Salad, Boondi Raita"
     },
     "Tuesday": {
-        "B": "Aloo Paratha",
+        "B": "Puri Bhaji",
 		"L": "Veg Kolhapuri, Soya Chilli Dry, Dal Makhani, Jeera Rice, Chapati, Sambhar, Tang, Roasted Papad, Macaroni Salad, Fruit Custard",
 		"S": "Bhel Puri",
 		"D": "Veg Jalfrezi, Samosa / Papdi Chaat, Yellow Dal, Rice, Chapati, Rasam, Mix Salad, Curd"
     },
     "Wednesday": {
         "B": "Idli Sambhar",
-		"L": "Punjabi Rajma, Aloo Mirchi, Dal Masala, Onion Rice, Chapati, Rassam, Chana Tomato Onion Salad, Curd, Fryums, Rasgulla / Balushahi",
+		"L": "Punjabi Rajma, Aloo Methi, Dal Masala, Onion Rice, Chapati, Rassam, Chana Tomato Onion Salad, Curd, Fryums, Rasgulla / Balushahi",
 		"S": "Kachori",
 		"D": "Paneer Biryani, Chicken Biryani, Green Chawli / Pumpkin Masala, Fruit, Rice, Chapati, Sambhar, Tossed Salad, Veg Raita"
     },
     "Thursday": {
-        "B": "Puri Bhaji",
+        "B": "Masala Pan Sandwich",
 		"L": "Aloo Jeera, Chole Amritsari, Puri, Dal Fry, Plain Rice, Chapati, Sambhar, Fresh Lime Water, Roasted Papad, Plain Curd, Rice / Sevai Kheer",
 		"S": "Schezwan Roll",
 		"D": "Veg Manchurian, Veg Fried / Schezwan Rice, Manchow Soup, Mushroom Masala, Chapati, Masala Khichdi, Mix Salad, Veg Raita"
     },
     "Friday": {
-        "B": "Masala Sandwich",
+        "B": "Aloo Paratha",
 		"L": "Cabbage Sabzi Dry, Moong Masala, Dal Tadka, Plain Rice, Chapati, Rassam, Sprouts Salad, Curd, Fryums, Moong Daal Halwa",
 		"S": "Vada Pav",
 		"D": "Paneer Tikka Masala / Kadhai, Egg Curry, Fruit, Aloo Gobi Matar, Dal Tadka, Rice, Chapati, Sambhar, Green Salad, Boondi Raita"
