@@ -5,21 +5,21 @@
         navigator.serviceWorker && navigator.serviceWorker.register("sw.js")
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQTZ48NDYC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        if(!window.location.href.includes("127")) {
-            gtag('js', new Date());
-            gtag('config', 'G-XQTZ48NDYC');
-        }
-    </script>
+    <!-- CSS -->
+    <link rel="preload" href="fonts/Young Serif.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Scripts -->
+    <script src="main.js" defer></script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mess Menu</title>
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#121212">
+    <link rel="manifest" href="manifest.json">
 
     <!-- Icons -->
     <link rel="apple-touch-icon" href="images/logo-black.png">
@@ -37,15 +37,16 @@
     <meta property="og:description" content="An interactive mess menu for BITS Goa" />
     <meta property="og:image" content="https://bpgc-mess-menu.netlify.app/images/logo720.png" />
 
-    <!-- PWA -->
-    <meta name="theme-color" content="#121212">
-    <link rel="manifest" href="manifest.json">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="main.css">
-    
-    <!-- Scripts -->
-    <script src="main.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQTZ48NDYC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        if(!window.location.href.includes("127")) {
+            gtag('js', new Date());
+            gtag('config', 'G-XQTZ48NDYC');
+        }
+    </script>
 </head>
 <body>
     <div id="page">
