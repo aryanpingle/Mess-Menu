@@ -229,7 +229,7 @@ body {
 @media (min-width: 720px) {
     .menu-category {
         scroll-snap-align: start;
-        height: 75%;
+        height: 85%;
         width: 50%;
         flex: 0 0 auto;
     }
@@ -237,7 +237,7 @@ body {
 
 @media (min-width: 1440px) {
     .menu-category {
-        width: calc(100% / 3);
+        width: calc(100% / 4);
     }
 }
 
