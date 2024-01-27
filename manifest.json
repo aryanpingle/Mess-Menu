@@ -22,18 +22,25 @@
 	],
 	"screenshots": [
 		{
-			"src": "/images/screenshots/Monday.png",
+			"src": "/images/screenshots/narrow-1.png",
 			"type": "image/png",
-			"sizes": "585x1266",
-			"platform": "android",
-			"label": "Basic Monday view"
+			"sizes": "541x1201",
+			"form_factor": "narrow",
+			"label": "Narrow Device (1)"
 		},
 		{
-			"src": "/images/screenshots/Sunday.png",
+			"src": "/images/screenshots/narrow-2.png",
 			"type": "image/png",
-			"sizes": "585x1266",
-			"platform": "android",
-			"label": "Basic Sunday view"
+			"sizes": "541x1201",
+			"form_factor": "narrow",
+			"label": "Narrow Device (2)"
+		},
+		{
+			"src": "/images/screenshots/wide.png",
+			"type": "image/png",
+			"sizes": "1920x1080",
+			"form_factor": "wide",
+			"label": "Wide Device"
 		}
 	]
 }
