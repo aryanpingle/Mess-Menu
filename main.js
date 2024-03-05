@@ -7,6 +7,42 @@ let selected_day = 0
 
 let menu = null
 
+function setupPWABanner() {
+    document.querySelector(".pwa-install-banner").style.display = "block";
+    const ua = navigator.userAgent
+    let install_text = ""
+    if(['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform)) {
+        // iOS + not Safari
+        install_text = "[In Safari] Share → Add to Home Screen"
+    }
+    else if(ua.match(/edg/i)) {
+        // Edge
+        install_text = "Options (≡) → Add to phone"
+    }
+    else if (ua.match(/samsungbrowser/i)) {
+        // Fkin Samsung Internet
+        install_text = "Click on the download button (near the URL)"
+    }
+    else if(ua.match(/chrome|chromium|crios/i)) {
+        // Chrome
+        install_text = "Options (⋮) → Install App"
+    }
+    else if(ua.match(/firefox|fxios/i)) {
+        // Firefox
+        install_text = "Options (⋮) → Install App"
+    }
+    else if(ua.match(/opr\//i)) {
+        // Opera
+        install_text = "Options (⋮) → Install App"
+    }
+    else {
+        // Unknown / Unsupported Browser
+        install_text = "Options → Install App"
+    }
+
+    document.querySelector("#pwa-install-instructions").innerText = install_text
+}
+
 async function setup() {
     fetch("./menu.json").then(d => d.json()).then(data => {
         menu = data
@@ -40,6 +76,9 @@ async function setup() {
             "event_category": "engagement",
             "value": 1
         })
+    }
+    else {
+        setupPWABanner();
     }
 
     // new Date().getDay() returns 1 for Monday, 0/7 for Sunday
