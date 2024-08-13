@@ -152,10 +152,9 @@ body {
     align-items: center;
 }
 
-/* PWA Install Banner */
+/* Banners */
 
-.pwa-install-banner {
-    display: none;
+.banner {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 10px;
@@ -164,25 +163,25 @@ body {
 }
 
 @media (min-width: 720px) {
-    .pwa-install-banner {
+    .banner {
         display: none;
     }    
 }
 
-.pwa-install-banner__content {
+.banner__content {
     position: relative;
     padding: 0.5rem;
     text-align: center;
 }
 
-.pwa-install-banner__content > img {
+.banner__content > img {
     position: absolute;
     height: 20px;
     opacity: 0.5;
     transform-origin: center;
 }
 
-.pwa-install-banner__content > hr {
+.banner__content > hr {
     width: 75%;
     background-color: currentColor;
     opacity: 0.25;
@@ -190,7 +189,7 @@ body {
     border: 0;
 }
 
-.pwa-install-banner__content > div {
+.banner__content > div {
     font-size: 0.75em;
 }
 
@@ -215,6 +214,12 @@ body {
     transform: rotate(180deg);
     bottom: 0;
     left: 0;
+}
+
+/* PWA Install Banner */
+
+.pwa-install-banner {
+    display: none;
 }
 
 /* Actual Menu */
