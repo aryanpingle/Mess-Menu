@@ -164,7 +164,7 @@ body {
 
 @media (min-width: 720px) {
     .banner {
-        display: none;
+        display: none !important;
     }    
 }
 
