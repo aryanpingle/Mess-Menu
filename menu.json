@@ -1,44 +1,44 @@
 {
     "Monday": {
         "B": "Aloo Paratha",
-		"L": "Black Chana Dry, Aloo Rasila, Dal Tadka, Rice, Chapati, Rassam, Green Salad, Punjabi Lassi, Fryums, Gulab Jamun",
-		"S": "Onion Bhajiya",
-		"D": "Paneer Butter Masala, Chicken / Egg Curry, Banana, Baingan Bharta, Dal Masala, Plain Rice, Chapati, Sambhar, Onion Salad, Boondi Raita"
+		"L": "Aloo Parwal Dry, Besan Gatta Gravy, Dal Tadka, Rice, Chapati, Rassam, Green Salad, Punjabi Lassi, Buttermilk, Gulab Jamun",
+		"S": "Spicy Bhelpuri",
+		"D": "Paneer Bhurji / Palak Paneer, Egg Bhurji / Curry, Fruit, Mix Veg Dry, Dal Masala, Jeera Rice, Chapati + Paratha, Sambhar, Onion Salad, Boondi Raita"
     },
     "Tuesday": {
-        "B": "Idli Sambhar / Medu Wada",
-		"L": "Veg Kolhapuri, Cabbage Dry, Dal Makhani, Jeera Rice, Chapati, Sambhar, Sprout Moong Salad, Mint Lime Water, Roasted Papad, Rasmalai",
-		"S": "Maggi",
-		"D": "Samosa / Papdi Chaat, Aloo Gobi Mattar, Yellow Dal, Plain Rice, Chapati, Rassam, Mixed Salad, Plain Curd"
+        "B": "Misal Pav",
+		"L": "Punjabi Rajma, Cabbage Dry, Dal Kolhapuri, Sambhar, Chapati, Plain Rice, Roasted Papad, Chana Onion Tomato Salad, Plain Curd, Tang Juice, Rasmalai",
+		"S": "Vada Pav",
+		"D": "Dahi Kachori / Aloo Tikki Chaat, Masala Bhindi Dry, Sindhi Besan Kadhi, Plain Rice, Chapati, Rassam, Tossed Salad, Plain Curd"
     },
     "Wednesday": {
-        "B": "Masala Sandwich",
-		"L": "Punjabi Rajma, Dudhi Chana, Dal Masala, Plain Rice, Chapati, Rassam, Chana Tomato Onion Salad, Curd, Fryums, Moong-dal Halwa",
-		"S": "Kachori",
-		"D": "Paneer Biryani, Chicken Biryani, Veg Raita, Pumpkin Masala, Banana, Dal Palak, Rice, Chapati, Sambhar, Tossed Salad"
+        "B": "Medu Wada / Idli",
+		"L": "Aloo Gobi Dry, Veg Kolhapuri, Dal Makhani, Rassam, Chapati, Jeera Rice, Fryums, Sprout Moong Salad, Punjabi Lassi",
+		"S": "Veg Cutlet",
+		"D": "Paneer Biryani, Chicken Biryani, Fruits, Aloo Capsicum Dry, Dal Lasooni, Plain Rice, Chapati, Sambhar, Mixed Salad, Veg Raita"
     },
     "Thursday": {
-        "B": "Veg Upma",
-		"L": "Aloo Jeera, Chole Amritsari, Puri, Dal Fry, Plain Rice, Chapati, Sambhar, Fresh Lime Water, Roasted Papad, Plain Curd, Sevai Kheer",
-		"S": "Vada Pav",
-		"D": "Schezwan Noodles / Fried Rice, Machurian, Hot & Sour Soup, Veg Jalfrezi, Chapati, Masala Khichdi, Mixed Salad, Veg Raita"
+        "B": "Veg Sandwich",
+		"L": "Aloo Jeera, Chole Amritsari, Puri, Dal Fry, Plain Rice, Chapati, Sambhar, Fresh Lime Water, Fried Papad, Cucumber Raita, Sevai Kheer / Shrikhand",
+		"S": "Onion Bhajiya",
+		"D": "Pav Bhaji, Mushroom Masala, Onion + Lemon, Roasted Papad, Chapati, Masala Khichdi, Tossed Salad, Cucumber Raita"
     },
     "Friday": {
-        "B": "Puri Bhaji",
-		"L": "Achari Bhindi, Soya Dry, Dal Makhani, Plain Rice, Chapati, Rassam, Dhokla, Plain Curd, Fryums, Fruit Custard",
-		"S": "French Fries",
-		"D": "Paneer Tikka Masala / Kadhai, Egg Curry, Fruit, Dal Tadka, Plain Rice, Chapati, Sambhar, Green Salad, Boondi Raita"
+        "B": "Onion Tomato Uttapam",
+		"L": "Bhindi Fry, Moong Dry, Kadhi Pakoda, Rassam, Chapati, Jeera Rice, Fryums, Dhokla, Plain Curd, Iced Tea, Fruit Custard",
+		"S": "Schezwan Roll",
+		"D": "Paneer Tikka / Mattar Paneer, Chicken / Egg Curry, Fruit, Dal Tadka, Jeera Rice, Chapati + Paratha, Sambhar, Green Salad, Boondi Raita"
     },
     "Saturday": {
-        "B": "Masala Dosa / Uttapa",
-		"L": "Kadhi Pakoda, Moong Dal, Dal Fry, Plain Rice, Chapati, Sambhar, Mixed Salad, Buttermilk, Roasted Papad, Jalebi Rabdi",
-		"S": "Dabeli",
-		"D": "Stuffed Kulcha, Dal Tadka, Plain Rice, Curd, Chapati, Kokam Rassam, Mixed Salad"
+        "B": "Poha",
+		"L": "Dum Aloo Gravy, Black Chana Dry, Dal Lasooni, Sambhar, Chapati, Mattar Rice, Roasted Papad, Macaroni Salad, Mint Lemonade, Jalebi Rabdi",
+		"S": "French Fries",
+		"D": "Mix Paratha, Dal Fry, Sev Tamatar / Misal Sev, Plain Rice, Chapati, Kokam Rassam, Mixed Salad, Plain Curd"
     },
     "Sunday": {
-        "B": "Onion Poha",
-		"L": "Veg Kofta, Dahi Wada, Dal Fry, Dum Veg Biryani, Chapati, Veg Raita, Fried Papad",
-		"S": "Samosa",
-		"D": "Chole Kulche, Pani Puri, Masala Khichdi, Aloo Mattar, Chapati, Choco Bite, Mixed Salad"
+        "B": "Masala Dosa",
+		"L": "Veg Kofta, Dahi Wada, Dal Fry, Chapati, Veg Masala Pulav, Fried Papad, Veg Raita",
+		"S": "Dabeli",
+		"D": "Chole Bhature / Kulche, Pani Puri, Curd Rice, Onion + Lemon, Chapati, Choco Bite, Green Salad"
     }
 }
