@@ -323,6 +323,9 @@ body {
     border: 1px solid var(--accent);
     border-radius: 0.5em;
     margin: 0 0.5rem;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 .menu-category-inner > * {
@@ -358,6 +361,11 @@ body {
     display: inline-block;
     font-weight: 300;
     font-size: 0.5em;
+}
+
+.menu__items {
+    overflow: hidden auto;
+    scrollbar-color: var(--accent) transparent;
 }
 
 .menu__item {
@@ -410,17 +418,5 @@ a {
 @media (min-width: 720px) {
     .footer {
         display: none;
-    }
-}
-
-@media (min-width: 720px) {
-    .menu-category-inner {
-        overflow: auto;
-    }
-    .menu-category__header {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        background-color: #121212;
     }
 }
