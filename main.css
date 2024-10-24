@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Young Serif';
+    font-family: "Young Serif";
     font-display: swap;
-    src: url('fonts/Young\ Serif.woff2') format('woff2'),
-        url('fonts/Young\ Serif.woff') format('woff');
+    src: url("fonts/Young\ Serif.woff2") format("woff2"),
+        url("fonts/Young\ Serif.woff") format("woff");
 }
 
 :root {
-    font-family: 'Young Serif', serif;
+    font-family: "Young Serif", serif;
     font-size: 25px;
     --hue-breakfast: 20;
     --hue-lunch: 157;
@@ -70,7 +70,7 @@ body {
 }
 
 .day-picker::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -104,7 +104,7 @@ body {
 }
 
 .day-choice::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -164,7 +164,7 @@ body {
 @media (min-width: 720px) {
     .banner {
         display: none !important;
-    }    
+    }
 }
 
 .banner__content {
@@ -229,7 +229,7 @@ body {
     flex-direction: column;
     align-items: stretch;
     /* padding: 0.5em; */
-    
+
     background-color: inherit;
     overflow: auto;
 }
@@ -258,7 +258,8 @@ body {
         scroll-snap-type: x mandatory;
 
         scrollbar-width: 8px;
-        scrollbar-color: var(--scrollbar-track-color) var(--scrollbar-thumb-color);
+        scrollbar-color: var(--scrollbar-track-color)
+            var(--scrollbar-thumb-color);
     }
 
     #actual-menu::-webkit-scrollbar {
@@ -271,19 +272,23 @@ body {
     }
 }
 
-#B, #B + .share_toolbar {
+#B,
+#B + .share_toolbar {
     --accent-hue: var(--hue-breakfast);
     --accent: var(--breakfast-accent);
 }
-#L, #L + .share_toolbar {
+#L,
+#L + .share_toolbar {
     --accent-hue: var(--hue-lunch);
     --accent: var(--lunch-accent);
 }
-#S, #S + .share_toolbar {
+#S,
+#S + .share_toolbar {
     --accent-hue: var(--hue-snacks);
     --accent: var(--snacks-accent);
 }
-#D, #D + .share_toolbar {
+#D,
+#D + .share_toolbar {
     --accent-hue: var(--hue-dinner);
     --accent: var(--dinner-accent);
 }
@@ -405,5 +410,17 @@ a {
 @media (min-width: 720px) {
     .footer {
         display: none;
-    }    
+    }
+}
+
+@media (min-width: 720px) {
+    .menu-category-inner {
+        overflow: auto;
+    }
+    .menu-category__header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #121212;
+    }
 }
