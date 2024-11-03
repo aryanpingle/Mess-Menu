@@ -314,10 +314,15 @@ body {
 
 @media (min-width: 1440px) {
     .menu-category {
-        /* width: calc(100% / 4); initial stuff */
+        /* INITIAL STUFF */
+        /* width: calc(100% / 4); */
+
+        /* THESE ARE THE 3 OPTIONS!!! */
         /* width: calc(100% / 3); */
-        width: 400px;
+        /* width: 400px; */
         /* width: auto; */
+
+        width: 400px;
     }
 }
 
