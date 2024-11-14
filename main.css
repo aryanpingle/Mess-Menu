@@ -326,6 +326,12 @@ body {
     }
 }
 
+@media (min-width: 1584px) {
+    .menu-category {
+        width: calc(100% / 4);
+    }
+}
+
 @media (max-width: 900px) and (min-width: 720px) {
     .menu-category {
         width: 400px;
