@@ -318,11 +318,11 @@ body {
         /* width: calc(100% / 4); */
 
         /* THESE ARE THE 3 OPTIONS!!! */
-        /* width: calc(100% / 3); */
+        width: calc(100% / 3.5);
         /* width: 400px; */
         /* width: auto; */
 
-        width: 400px;
+        /* width: 400px; */
     }
 }
 
