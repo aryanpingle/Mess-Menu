@@ -1,11 +1,3 @@
-const log = (text, color = "rgb(128, 128, 128)") =>
-    self.registration.scope.includes("127")
-        ? console.log(
-              `%c${text}`,
-              `color: black !important; background-color: ${color};`
-          )
-        : 0;
-
 const APP_VERSION = 6.3;
 
 const DOC_CACHE_NAME = `DOC_CACHE`;
@@ -15,18 +7,45 @@ const RES_CACHE_NAME = `RES_CACHEv${RES_CACHE_VERSION.toFixed(2)}`;
 let RES_CACHE = null;
 
 const STOP_CACHING = self.registration.scope.includes("127.0.0.1");
-String.prototype.endsWithAny = function (...ends) {
-    return ends.some((end) => this.endsWith(end));
-};
+
+// UTILITY FUNCTIONS
+
+/**
+ * Check if a given string ends with any substring.
+ *
+ * @param {string} str
+ * @param  {string[]} ends
+ * @returns {boolean}
+ */
+function endsWithAny(str, ends) {
+    return ends.some((end) => str.endsWith(end));
+}
+
+/**
+ * Print to the console when in development.
+ *
+ * @param {string} text
+ * @param {string} backgroundColor
+ */
+function debug(text, backgroundColor) {
+    if (self.registration.scope.includes("127")) {
+        console.log(
+            `%c${text}`,
+            `color: black !important; background-color: ${backgroundColor};`
+        );
+    }
+}
+
+// SERVICE WORKER LIFECYCLE EVENTS
 
 self.addEventListener("install", (event) => {
-    log("Service Worker Installed");
+    debug("Service Worker Installed");
 
     self.skipWaiting();
 });
 
 self.addEventListener("activate", async (event) => {
-    log("Service Worker Activated");
+    debug("Service Worker Activated");
 
     // Create the two cachess
     event.waitUntil(
@@ -38,7 +57,7 @@ self.addEventListener("activate", async (event) => {
     let cache_names = await caches.keys();
     cache_names.forEach((cache_name) => {
         if (cache_name != DOC_CACHE_NAME && cache_name != RES_CACHE_NAME) {
-            log(`Service Worker => Deleting '${cache_name}'`, "red");
+            debug(`Service Worker => Deleting '${cache_name}'`, "red");
             caches.delete(cache_name);
         }
     });
@@ -66,8 +85,9 @@ async function get_request(request_event) {
         return menu;
     }
 
-    if (url.endsWithAny(".js", ".html", ".css", "/", "manifest.json")) {
-        log(`DOC: ${url}`);
+    const resourceSuffixes = [".js", ".html", ".css", "/", "manifest.json"];
+    if (endsWithAny(url, resourceSuffixes)) {
+        debug(`DOC: ${url}`);
         // Check if cached version exists
         let cache_match = await DOC_CACHE.match(request, { ignoreVary: true });
         if (cache_match) {
@@ -77,7 +97,7 @@ async function get_request(request_event) {
             // Return the cached version
             return cache_match;
         } else {
-            log(`${url} wasn't in cache, so doing fetch`, "yellow");
+            debug(`${url} wasn't in cache, so doing fetch`, "yellow");
             // Nothing in cache, perform basic fetch request
             return fetch(request).then((response) => {
                 saveResponse(request, response, DOC_CACHE);
@@ -85,11 +105,11 @@ async function get_request(request_event) {
             });
         }
     } else {
-        log(`RES: ${url}`);
+        debug(`RES: ${url}`);
         // Resource like image, manifest etc.
         let cache_match = await RES_CACHE.match(request, { ignoreVary: true });
         if (cache_match) {
-            log(`${url} returned as cache`, "rgb(0, 255, 128)");
+            debug(`${url} returned as cache`, "rgb(0, 255, 128)");
             return cache_match;
         }
 
@@ -136,11 +156,11 @@ async function getMenu(request_event) {
                 saveResponse(request, response, RES_CACHE);
 
                 // Return network match
-                log("(menu) network fetch succeeded", "rgb(128, 255, 128)");
+                debug("(menu) network fetch succeeded", "rgb(128, 255, 128)");
                 return response;
             })
             .catch(async (err) => {
-                log("(menu) could not fetch in time", "rgb(255, 128, 128)");
+                debug("(menu) could not fetch in time", "rgb(255, 128, 128)");
 
                 // Perform network request in the background
                 networkFetchAndSave(request, RES_CACHE);
@@ -151,7 +171,7 @@ async function getMenu(request_event) {
                 });
 
                 if (cache_match) {
-                    log("(menu) Got from cache", "rgb(128, 128, 255)");
+                    debug("(menu) Got from cache", "rgb(128, 128, 255)");
                 }
 
                 return cache_match;
@@ -175,11 +195,11 @@ async function getMenu(request_event) {
             saveResponse(request, response, RES_CACHE);
 
             // Return network match
-            log("(menu) network fetch succeeded", "rgb(128, 255, 128)");
+            debug("(menu) network fetch succeeded", "rgb(128, 255, 128)");
             return response;
         })
         .catch(async (err) => {
-            log("could not fetch menu in time", "rgb(255, 128, 128)");
+            debug("could not fetch menu in time", "rgb(255, 128, 128)");
 
             // Perform network request in the background
             networkFetchAndSave(request, RES_CACHE);
@@ -190,7 +210,7 @@ async function getMenu(request_event) {
             });
 
             if (cache_match) {
-                log("Got a valid cache match", "rgb(128, 128, 255)");
+                debug("Got a valid cache match", "rgb(128, 128, 255)");
             }
 
             return cache_match;
