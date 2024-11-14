@@ -1,8 +1,8 @@
 {
     "Monday": {
-        "B": ["Masala / Veg Sandich"],
+        "B": ["Masala / Veg Sandwich"],
         "L": [
-            "Aloo Gobhi Mutter Dry",
+            "Aloo Gobi Mutter Dry",
             "Punjabi Rajma",
             "Dal Masala",
             "Plain Rice",
@@ -32,7 +32,7 @@
         "L": [
             "Bhindi Dry",
             "Veg Kolhapuri",
-            "Dal Makhni",
+            "Dal Makhani",
             "Jeera Rice",
             "Chapati",
             "Rassam",
@@ -45,16 +45,16 @@
         "D": [
             "Methi Malai Matar",
             "Samosa Chaat / Dahi Kachori",
-            "Dal Panchratana",
+            "Dal Panchratna",
             "Plain Rice",
             "Chapati",
             "Rassam",
-            "Toss Salad",
+            "Tossed Salad",
             "Plain Curd"
         ]
     },
     "Wednesday": {
-        "B": ["Aloo Pyaz Paratha"],
+        "B": ["Aloo Pyaaz Paratha"],
         "L": [
             "Black Chana Dry",
             "Malai Kofta",
@@ -102,7 +102,7 @@
             "Onion + Lemon",
             "Roasted Papad",
             "Chapati",
-            "Veg Shezwan Fried Rice",
+            "Veg Schezwan Fried Rice",
             "Green Salad",
             "Cucumber Raita"
         ]
@@ -112,7 +112,7 @@
         "L": [
             "Soya Dry",
             "Sev Tamatar",
-            "Dal Panchratana",
+            "Dal Panchratna",
             "Sambhar",
             "Chapati",
             "Plain Rice",
@@ -132,7 +132,7 @@
             "Jeera Rice",
             "Chapati",
             "Sambhar",
-            "Toss Salad",
+            "Tossed Salad",
             "Boondi Raita"
         ]
     },
@@ -152,9 +152,9 @@
         ],
         "S": ["French Fries"],
         "D": [
-            "Mix Paratha",
+            "Mixed Paratha",
             "Aloo Mutter Gravy",
-            "Dal Makhni",
+            "Dal Makhani",
             "Plain Rice",
             "Chapati",
             "Kokam Rassam",
