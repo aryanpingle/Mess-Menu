@@ -11,11 +11,11 @@
             "Green Salad",
             "Fryums",
             "Curd",
-            "Gulab Jamun / Cream Jamun"
+            "Gulab / Cream Jamun"
         ],
         "S": ["Masala Maggi"],
         "D": [
-            "Paneer Bhurji / Palak Paneer",
+            "Palak / Bhurji Paneer",
             "Egg Bhurji / Curry",
             "Mix Tava Veg Dry",
             "Fruit",
@@ -37,7 +37,7 @@
             "Chapati",
             "Rassam",
             "Roasted Papad",
-            "Chana Onion Tomato Salad",
+            "Chana Salad",
             "Curd",
             "Fruit Custard"
         ],
@@ -108,7 +108,7 @@
         ]
     },
     "Friday": {
-        "B": ["Medu Wada / Onion Uttapam"],
+        "B": ["Medu Wada / Uttapam"],
         "L": [
             "Soya Dry",
             "Sev Tamatar",
@@ -120,12 +120,12 @@
             "Dhokla",
             "Plain Curd",
             "Chutney",
-            "Moong Dal Halwa / Pineapple Sheera"
+            "Dal Halwa / Pineapple Sheera"
         ],
         "S": ["Schezwan Roll"],
         "D": [
-            "Kadhai Paneer / Mutter Paneer",
-            "Egg Curry / Butter Chicken",
+            "Kadhai / Mutter Paneer",
+            "Egg Curry / Chicken",
             "Dhudi Chana Dry",
             "Fruit",
             "Dal Tadka",
