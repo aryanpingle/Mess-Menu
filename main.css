@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Young Serif';
+    font-family: "Young Serif";
     font-display: swap;
-    src: url('fonts/Young\ Serif.woff2') format('woff2'),
-        url('fonts/Young\ Serif.woff') format('woff');
+    src: url("fonts/Young\ Serif.woff2") format("woff2"),
+        url("fonts/Young\ Serif.woff") format("woff");
 }
 
 :root {
-    font-family: 'Young Serif', serif;
+    font-family: "Young Serif", serif;
     font-size: 25px;
     --hue-breakfast: 20;
     --hue-lunch: 157;
@@ -70,7 +70,7 @@ body {
 }
 
 .day-picker::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -104,7 +104,7 @@ body {
 }
 
 .day-choice::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -164,7 +164,7 @@ body {
 @media (min-width: 720px) {
     .banner {
         display: none !important;
-    }    
+    }
 }
 
 .banner__content {
@@ -229,7 +229,7 @@ body {
     flex-direction: column;
     align-items: stretch;
     /* padding: 0.5em; */
-    
+
     background-color: inherit;
     overflow: auto;
 }
@@ -258,7 +258,8 @@ body {
         scroll-snap-type: x mandatory;
 
         scrollbar-width: 8px;
-        scrollbar-color: var(--scrollbar-track-color) var(--scrollbar-thumb-color);
+        scrollbar-color: var(--scrollbar-track-color)
+            var(--scrollbar-thumb-color);
     }
 
     #actual-menu::-webkit-scrollbar {
@@ -271,19 +272,23 @@ body {
     }
 }
 
-#B, #B + .share_toolbar {
+#B,
+#B + .share_toolbar {
     --accent-hue: var(--hue-breakfast);
     --accent: var(--breakfast-accent);
 }
-#L, #L + .share_toolbar {
+#L,
+#L + .share_toolbar {
     --accent-hue: var(--hue-lunch);
     --accent: var(--lunch-accent);
 }
-#S, #S + .share_toolbar {
+#S,
+#S + .share_toolbar {
     --accent-hue: var(--hue-snacks);
     --accent: var(--snacks-accent);
 }
-#D, #D + .share_toolbar {
+#D,
+#D + .share_toolbar {
     --accent-hue: var(--hue-dinner);
     --accent: var(--dinner-accent);
 }
@@ -293,6 +298,7 @@ body {
     color: var(--accent);
     background-color: inherit;
     padding-top: 1em;
+    width: auto;
 }
 
 @media (min-width: 720px) {
@@ -308,7 +314,27 @@ body {
 
 @media (min-width: 1440px) {
     .menu-category {
+        /* INITIAL STUFF */
+        /* width: calc(100% / 4); */
+
+        /* THESE ARE THE 3 OPTIONS!!! */
+        width: calc(100% / 3.5);
+        /* width: 400px; */
+        /* width: auto; */
+
+        /* width: 400px; */
+    }
+}
+
+@media (min-width: 1584px) {
+    .menu-category {
         width: calc(100% / 4);
+    }
+}
+
+@media (max-width: 900px) and (min-width: 720px) {
+    .menu-category {
+        width: 400px;
     }
 }
 
@@ -318,6 +344,9 @@ body {
     border: 1px solid var(--accent);
     border-radius: 0.5em;
     margin: 0 0.5rem;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 .menu-category-inner > * {
@@ -353,6 +382,11 @@ body {
     display: inline-block;
     font-weight: 300;
     font-size: 0.5em;
+}
+
+.menu__items {
+    overflow: hidden auto;
+    scrollbar-color: var(--accent) transparent;
 }
 
 .menu__item {
@@ -405,5 +439,5 @@ a {
 @media (min-width: 720px) {
     .footer {
         display: none;
-    }    
+    }
 }
