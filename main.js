@@ -110,6 +110,10 @@ async function loadMenu() {
         setupPWABanner();
     }
 
+    // Update the date picker
+    const currentDateIndicator = document.querySelector(".day-picker--current");
+    currentDateIndicator.innerHTML = getPrettyDateString(new Date());
+
     // Setup the day navigation buttons
     document.querySelector(".day-picker--prev").onclick = () => {
         if ("vibrate" in navigator) navigator.vibrate(50);
