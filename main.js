@@ -16,7 +16,7 @@ var dailyItems = {
 };
 
 // Global variables
-let selected_day = 0;
+let selectedDate = new Date();
 let menu = null;
 
 function setupPWABanner() {
@@ -89,7 +89,7 @@ function jumpToMenuPosition() {
 async function loadMenu() {
     menu = await fetch("./menu.json").then((res) => res.json());
     addDailyItemsToMenu();
-    initializeMenuUI(selected_day);
+    initializeMenuUI(new Date());
     jumpToMenuPosition();
 }
 
@@ -110,46 +110,51 @@ async function loadMenu() {
         setupPWABanner();
     }
 
-    // getDay() returns 0 for Sunday
-    // Shift it so that 0 represents Monday
-    selected_day = (new Date().getDay() + 6) % 7;
+    // Setup the day navigation buttons
+    document.querySelector(".day-picker--prev").onclick = () => {
+        if ("vibrate" in navigator) navigator.vibrate(50);
+        selectedDate = addDays(selectedDate, -1);
+        initializeMenuUI(selectedDate);
+    };
+    document.querySelector(".day-picker--next").onclick = () => {
+        if ("vibrate" in navigator) navigator.vibrate(50);
+        selectedDate = addDays(selectedDate, +1);
+        initializeMenuUI(selectedDate);
+    };
 
-    // Set the current day and select it
-    document
-        .querySelector(".day-picker")
-        .children[selected_day].classList.add(
-            "day-choice--today",
-            "day-choice--selected"
-        );
-
-    // Setup the day choice buttons
-    document.querySelectorAll(".day-choice").forEach((day_choice, index) => {
-        day_choice.onclick = (event) => {
-            if ("vibrate" in navigator) navigator.vibrate(50);
-
-            document
-                .querySelector(".day-choice--selected")
-                .classList.remove("day-choice--selected");
-            day_choice.classList.add("day-choice--selected");
-            selected_day = index;
-            initializeMenuUI(selected_day);
-        };
+    // Add event listener to the date picker
+    const inputElementDate = document.querySelector("#input--date");
+    inputElementDate.addEventListener("change", (event) => {
+        selectedDate = new Date(inputElementDate.value);
+        initializeMenuUI(selectedDate);
     });
+    document.querySelector(".day-picker--current").onclick = (event) => {
+        const hiddenInput = document.querySelector("#input--date");
+        hiddenInput.showPicker();
+    };
 })();
 
 /**
- * Update the menu shown on screen for the given day.
+ * Update the menu shown on screen for the given date.
  *
- * @param {number} dayIndex
+ * @param {Date} date
  */
-function initializeMenuUI(dayIndex) {
-    let items = Object.entries(menu)[dayIndex][1];
-    for (let [mealName, list] of Object.entries(items)) {
+function initializeMenuUI(date) {
+    const menuOTD = getMenuOTD(date);
+
+    // Update the date picker
+    const currentDateIndicator = document.querySelector(".day-picker--current");
+    currentDateIndicator.innerHTML = getPrettyDateString(date);
+
+    // Update the menu
+    for (let [mealName, mealItems] of Object.entries(menuOTD)) {
+        const variableItems = mealItems[0];
+        const everydayItems = mealItems[1];
         document
             .getElementById(mealName)
             .querySelector(".menu__items").innerHTML = [
-            ...list[0].map(variableItemHTML),
-            ...list[1].map(everydayItemHTML),
+            ...variableItems.map(variableItemHTML),
+            ...everydayItems.map(everydayItemHTML),
         ].join("");
     }
 }
@@ -163,16 +168,103 @@ function everydayItemHTML(item_name) {
 }
 
 /**
+ * @param {Date} chosenDate
+ */
+function getMenuOTD(chosenDate) {
+    const startDateDawn = new Date(menu["start"]);
+
+    // Make sure the date starts at dawn
+    chosenDate.setHours(0, 0, 0, 0);
+    if (chosenDate < startDateDawn) chosenDate = startDateDawn;
+
+    // Initialize the counter (to count till chosenDate)
+    let counterDate = startDateDawn;
+    let counterIsSunday = counterDate.getDay() === 0;
+    let rotationIndex = 0;
+    if (counterIsSunday) {
+        rotationIndex = -1;
+    } else {
+        rotationIndex = 0;
+    }
+
+    // Count till chosenDate
+    while (counterDate < chosenDate) {
+        counterDate = addDays(counterDate, 1);
+        counterIsSunday = counterDate.getDay() === 0;
+
+        if (!counterIsSunday) {
+            // mod by 9 because of the stupid 9+1 system
+            rotationIndex = (rotationIndex + 1) % 9;
+        }
+    }
+
+    if (counterIsSunday) {
+        // Sunday
+        return menu["menu"]["sunday"];
+    } else {
+        // Normal day in the rotation
+        return menu["menu"]["rotation"]["D" + (rotationIndex + 1)];
+    }
+}
+
+/**
+ * @param {Date} date
+ */
+function getPrettyDateString(date) {
+    const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const MONTHS = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "June",
+        "July",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+    ];
+    const monthIndex = date.getMonth();
+    const monthStr = MONTHS[monthIndex];
+    return `${DAYS[date.getDay()]}, ${monthStr} ${date.getDate()}`;
+}
+
+/**
  * Add daily items to each the meal items of each meal in the menu.
  * Modifies the menu in-place.
  */
 function addDailyItemsToMenu() {
-    for (let day of Object.keys(menu)) {
-        for (let [mealName, items] of Object.entries(menu[day])) {
+    const actualMenu = menu["menu"];
+
+    // For rotations
+    const rotationMenus = Object.values(actualMenu["rotation"]);
+    rotationMenus.forEach((menuEntries) => {
+        // menuEntries = { "B": [], ... }
+        for (let [mealName, items] of Object.entries(menuEntries)) {
             let variable_items = items;
             let dailyItemsForMeal = dailyItems[mealName];
 
-            menu[day][mealName] = [variable_items, dailyItemsForMeal];
+            menuEntries[mealName] = [variable_items, dailyItemsForMeal];
         }
+    });
+
+    // For sunday
+    for (let [mealName, items] of Object.entries(actualMenu["sunday"])) {
+        let variable_items = items;
+        let dailyItemsForMeal = dailyItems[mealName];
+
+        actualMenu["sunday"][mealName] = [variable_items, dailyItemsForMeal];
     }
+}
+
+/**
+ * @param {Date} date
+ * @param {number} numDays
+ * @returns {Date}
+ */
+function addDays(date, numDays) {
+    const oneDayMs = 1000 * 60 * 60 * 24;
+    return new Date(date.getTime() + oneDayMs * numDays);
 }
