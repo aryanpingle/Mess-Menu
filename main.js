@@ -135,7 +135,7 @@ async function loadMenu() {
             initializeMenuUI(selected_day);
         };
     });
-})()
+})();
 
 /**
  * Update the menu shown on screen for the given day.
