@@ -4,8 +4,9 @@
     "menu": {
         "rotation": {
             "D1": {
-                "B": ["Besan Chilla","Ketchup + Curd"],
-                "L": ["Corn Palak",
+                "B": ["Besan Chilla"],
+                "L": [
+                    "Corn Palak",
                     "Veg Kofta",
                     "Dal Tadka",
                     "Plain Rice",
@@ -32,7 +33,7 @@
                 ]
             },
             "D2": {
-                "B": ["Onion Poha","Lemon + Sev + Curd"],
+                "B": ["Onion Poha", "Lemon + Sev + Curd"],
                 "L": [
                     "Cabbage Dry",
                     "Veg Jalfrezi",
@@ -57,17 +58,17 @@
                 ]
             },
             "D3": {
-                "B": ["Tadka Idli + Sambhar","Ketchup + Chutney"],
+                "B": ["Tadka Idli + Sambhar", "Ketchup + Chutney"],
                 "L": [
                     "Kurkuri Achaari Bhindi",
                     "Methi Malai Matar",
-                    "Dal Masoor(Red)",
+                    "Dal Masoor (Red)",
                     "Jeera Rice",
                     "Chapati",
                     "Sambhar",
                     "Toss Salad",
                     "Fryums",
-                    "Butter Milk",
+                    "Buttermilk",
                     "Malai Sandwich"
                 ],
                 "S": ["Dabeli"],
@@ -85,12 +86,12 @@
                 ]
             },
             "D4": {
-                "B": ["Aloo Paratha","Curd + Ketchup"],
+                "B": ["Aloo Paratha", "Curd + Ketchup"],
                 "L": [
                     "Aloo Methi Dry",
                     "Punjabi Rajma Gravy",
                     "Dal Kolhapuri",
-                    "Plain RIce",
+                    "Plain Rice",
                     "Chapati",
                     "Rassam",
                     "Moong Salad",
@@ -105,12 +106,12 @@
                     "Chana Dal",
                     "Plain Rice + Curd Rice",
                     "Chapati",
-                    "Rasam",
+                    "Rassam",
                     "Onion + Lemon"
                 ]
             },
             "D5": {
-                "B": ["Veg Uttapam","Sambhar + Chutney"],
+                "B": ["Veg Uttapam", "Sambhar + Chutney"],
                 "L": [
                     "Soya Chili Dry",
                     "Sev Tamatar",
@@ -126,7 +127,7 @@
                 ],
                 "S": ["Spicy Bhelpuri"],
                 "D": [
-                    "Baigan Bharta",
+                    "Baingan Bharta",
                     "Paneer Lazeez",
                     "Egg Bhurji",
                     "Dal Kolhapuri",
@@ -139,7 +140,7 @@
                 ]
             },
             "D6": {
-                "B": ["Puri Bhaji","Pickle"],
+                "B": ["Puri Bhaji"],
                 "L": [
                     "Aloo Bhujiya",
                     "Chhole Amritsari",
@@ -161,11 +162,11 @@
                     "Plain Rice + Curd Rice",
                     "Chapati",
                     "Sambhar",
-                    "Toss Salad"
+                    "Tossed Salad"
                 ]
             },
             "D7": {
-                "B": ["Vermicelli","Curd"],
+                "B": ["Vermicelli", "Curd"],
                 "L": [
                     "Black Chana Dry",
                     "Kadhi Pakoda",
@@ -193,9 +194,9 @@
                 ]
             },
             "D8": {
-                "B": ["Misal Pav","Farsan"],
+                "B": ["Misal Pav", "Farsan"],
                 "L": [
-                    "Gobhi Matar Dry",
+                    "Gobi Matar Dry",
                     "Malai Kofta",
                     "Dal Fry",
                     "Plain Rice",
@@ -206,7 +207,7 @@
                     "Plain Curd",
                     "Shahi Tukda"
                 ],
-                "S" :["Ragda Pattices"],
+                "S": ["Ragda Pattices"],
                 "D": [
                     "Aloo Parwal Dry",
                     "Rajma Masala Gravy",
@@ -219,11 +220,11 @@
                 ]
             },
             "D9": {
-                "B": ["Masala Sandwich","Ketchup"],
+                "B": ["Masala Sandwich"],
                 "L": [
                     "Bhindi Dry",
                     "Dum Aloo Gravy",
-                    "Dal Lahsuni",
+                    "Dal Lasooni",
                     "Plain Rice",
                     "Chapati",
                     "Sambhar",
@@ -240,7 +241,7 @@
                     "Dal Fry",
                     "Plain Rice",
                     "Chapati",
-                    "Rasam",
+                    "Rassam",
                     "Sirka Onion",
                     "Boondi Raita",
                     "Fruit"
@@ -250,7 +251,7 @@
         "sunday": {
             "B": ["Podi Masala Dosa", "Chutney + Sambhar"],
             "L": [
-                "Tamatar Lashun Chutney + Thecha",
+                "Tamatar Lasoon Chutney + Thecha",
                 "Pyaaz Paratha",
                 "Dal Banjaara",
                 "Plain Rice",
