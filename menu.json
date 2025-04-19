@@ -7,7 +7,7 @@
                 "B": ["Misal Pav", "Farsan"],
                 "L": [
                     "Kurkuri Achari Bhindi",
-                    "Meethi Malai Matar",
+                    "Methi Malai Matar",
                     "Dal Masoor (Red)",
                     "Jeera Rice",
                     "Chapati",
@@ -39,22 +39,22 @@
                     "Dal Arhar",
                     "Plain Rice",
                     "Chapati + Puri",
-                    "Rasam",
+                    "Rassam",
                     "Sirka Onion",
                     "Fried Papad",
                     "Fresh Lime Water",
-					"Plain Curd", 
+                    "Plain Curd",
                     "Rice Kheer"
                 ],
                 "S": ["Aloo Onion Pakode"],
                 "D": [
-                    "Veg Handi Dry ",
+                    "Veg Handi Dry",
                     "Samosa Chat / Dahi Kachori",
                     "Dal Makhani",
                     "Plain Rice + Curd Rice",
                     "Chapati",
                     "Sambhar",
-                    "Toss Salad"
+                    "Tossed Salad"
                 ]
             },
             "D3": {
@@ -69,8 +69,8 @@
                     "Macaroni",
                     "Fryums",
                     "Tang Juice",
-                    "Gulab Jamun", 
-					"Plain Curd"
+                    "Gulab Jamun",
+                    "Plain Curd"
                 ],
                 "S": ["Spicy Bhelpuri"],
                 "D": [
@@ -112,7 +112,7 @@
                 ]
             },
             "D5": {
-                "B": ["Masala Sandwich", "Ketchup"],
+                "B": ["Masala Sandwich"],
                 "L": [
                     "Gobhi Matar Dry ",
                     "Malai Kofta (Yellow Gravy)",
@@ -129,7 +129,7 @@
                 "D": [
                     "Veg Makhanwala",
                     "Palak Paneer",
-					"Egg Curry", 
+                    "Egg Curry",
                     "Dal Kolhapuri",
                     "Plain Rice",
                     "Chapati",
@@ -183,7 +183,7 @@
                     "Soya Masala Dry",
                     "Paneer Bhurji",
                     "Egg Bhurji",
-                    "Dal Lahsuni",
+                    "Dal Lasooni",
                     "Plain Rice",
                     "Chapati",
                     "Rassam",
@@ -204,7 +204,7 @@
                     "Masala Chopped Salad",
                     "Fried Papad",
                     "Plain Curd",
-					"Mint Lime Water", 
+                    "Mint Lime Water",
                     "Rasmalai"
                 ],
                 "S": ["Samosa"],
