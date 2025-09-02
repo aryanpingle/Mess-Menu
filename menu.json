@@ -4,7 +4,7 @@
     "menu": {
         "rotation": {
             "D1": {
-                "B": ["Aloo Paratha","Curd"],
+                "B": ["Aloo Paratha", "Curd"],
                 "L": [
                     "Aloo Gobhi Dry",
                     "Red Malai Kofta Gravy",
@@ -32,7 +32,7 @@
                 ]
             },
             "D2": {
-                "B": ["Mutter Usal Kulcha","Onion"],
+                "B": ["Mutter Usal Kulcha", "Onion"],
                 "L": [
                     "Mix Veg Dry",
                     "Punjabi Rajma",
@@ -85,7 +85,7 @@
                 ]
             },
             "D4": {
-                "B": ["Onion Poha","Lemon+Sev+Curd"],
+                "B": ["Onion Poha", "Lemon + Sev + Curd"],
                 "L": [
                     "Aloo Jeera",
                     "Chhole Amritsari",
@@ -111,7 +111,7 @@
                 ]
             },
             "D5": {
-                "B": ["Masala Sandwich","Ketchup"],
+                "B": ["Masala Sandwich", "Ketchup"],
                 "L": [
                     "Bhindi Fry",
                     "Sev Tamatar Sabji",
@@ -124,7 +124,7 @@
                     "Plain Curd",
                     "Cream Jamun"
                 ],
-                "S": ["Sczehzwan Roll"],
+                "S": ["Schezwan Roll"],
                 "D": [
                     "Mix Veg Dry",
                     "Paneer Tikka Masala",
@@ -167,8 +167,8 @@
         "sunday": {
             "B": ["Podi Masala Dosa", "Sambhar + Chutney"],
             "L": [
-                "Tamaatar Lehsun Chutney",
                 "Pyaaz Paratha",
+                "Tamatar Lasoon Chutney",
                 "Dal Banjara",
                 "Kokum Rasam",
                 "Chapati",

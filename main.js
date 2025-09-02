@@ -3,11 +3,11 @@
 // User configuration
 var dailyItems = {
     B: [
+        "Tea + Coffee",
         "Boiled Egg / Omelette",
         "Bread + Butter + Jam",
         "Bournvita",
         "Hot + Cold Milk",
-        "Tea + Coffee",
         "Cornflakes",
     ],
     L: [],
@@ -197,7 +197,7 @@ function getMenuOTD(chosenDate) {
         counterIsSunday = counterDate.getDay() === 0;
 
         if (!counterIsSunday) {
-            // mod by 9 because of the stupid 9+1 system
+            // To go back to the stupid 9+1 system, simply replace the 6 with 9
             rotationIndex = (rotationIndex + 1) % 6;
         }
     }
