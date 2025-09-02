@@ -197,8 +197,8 @@ function getMenuOTD(chosenDate) {
         counterIsSunday = counterDate.getDay() === 0;
 
         if (!counterIsSunday) {
-            // mod by 9 because of the stupid 9+1 system
-            rotationIndex = (rotationIndex + 1) % 9;
+            // To go back to the stupid 9+1 system, simply replace the 6 with 9
+            rotationIndex = (rotationIndex + 1) % 6;
         }
     }
 
