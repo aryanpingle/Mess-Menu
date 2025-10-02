@@ -61,7 +61,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
     color: #e2e2e2;
 }
 
@@ -139,8 +139,8 @@ body {
 /* Banners */
 
 .banner {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    margin-top: 0.75rem; 
+    padding: 0.35rem 0.75rem; 
     border-radius: 10px;
     color: hsl(223deg, 75%, 75%);
 }
@@ -153,7 +153,7 @@ body {
 
 .banner__content {
     position: relative;
-    padding: 0.5rem;
+    padding: 0.35rem; 
     text-align: center;
 }
 
@@ -234,7 +234,7 @@ body {
         --scrollbar-thumb-color: #363636;
         width: 100%;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start; 
         font-size: 1.25em;
         padding: 0;
 
@@ -263,6 +263,12 @@ body {
     --accent-hue: var(--hue-lunch);
     --accent: var(--lunch-accent);
 }
+
+
+#L .menu-category__header {
+    flex-shrink: 0; 
+    min-height: 3rem; 
+}
 #S, #S + .share_toolbar {
     --accent-hue: var(--hue-snacks);
     --accent: var(--snacks-accent);
@@ -276,7 +282,7 @@ body {
     font-size: 1.2em;
     color: var(--accent);
     background-color: inherit;
-    padding-top: 1em;
+    padding-top: 1em; 
 }
 
 @media (min-width: 720px) {
@@ -286,7 +292,8 @@ body {
         width: 50%;
         flex: 0 0 auto;
 
-        padding: 0.5em 0;
+        padding: 0.5em 0; 
+        align-self: flex-start; 
     }
 }
 
@@ -301,16 +308,27 @@ body {
     background-color: inherit;
     border: 1px solid var(--accent);
     border-radius: 0.5em;
-    margin: 0 0.5rem;
+    margin: 0 0.5rem; 
 }
 
 .menu-category-inner > * {
-    padding: 0.5rem;
+    padding: 0.35rem; 
+}
+
+.menu__items {
+    overflow-y: visible;
 }
 
 @media (min-width: 720px) {
     .menu-category-inner {
         height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu__items {
+        flex: 1;
+        overflow-y: visible;
     }
 }
 
@@ -318,17 +336,24 @@ body {
     text-transform: uppercase;
     color: var(--accent);
 
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 
     border-bottom: 1px solid var(--accent);
+    padding: 0.5rem 0.25rem 0.35rem 0.25rem; 
+    min-height: 3rem; 
+    gap: 0.25rem; 
 }
 
 .meal-name {
     font-weight: 700;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em; 
+    font-size: 0.9em;
+    word-break: break-word; 
+    hyphens: auto; 
 }
 
 .meal-timing {
@@ -337,6 +362,7 @@ body {
     display: inline-block;
     font-weight: 300;
     font-size: 0.5em;
+    margin-bottom: 0.15rem; 
 }
 
 .menu__item {
