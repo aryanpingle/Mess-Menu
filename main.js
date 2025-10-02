@@ -292,6 +292,9 @@ function addDays(date, numDays) {
 function adjustMealHeightsForDesktop() {
     // Only apply on desktop screens (720px and wider)
     if (window.innerWidth < 720) {
+        // On mobile screens, ensure scrolling is always enabled
+        document.querySelector('#page').style.overflow = 'auto';
+        document.querySelector('#actual-menu').style.overflow = 'auto';
         return;
     }
 
@@ -352,7 +355,7 @@ function adjustMealHeightsForDesktop() {
             mealInner.style.height = '';
         });
         
-        // Disable main scrollbar when content fits
+        // On desktop, disable main scrollbar when content fits
         document.querySelector('#page').style.overflow = 'hidden';
         document.querySelector('#actual-menu').style.overflow = 'hidden';
     }
