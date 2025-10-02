@@ -136,6 +136,15 @@ async function loadMenu() {
         const hiddenInput = document.querySelector("#input--date");
         hiddenInput.showPicker();
     };
+
+    // Add window resize listener for desktop height adjustments
+    window.addEventListener('resize', () => {
+        // Debounce resize events
+        clearTimeout(window.resizeTimeout);
+        window.resizeTimeout = setTimeout(() => {
+            adjustMealHeightsForDesktop();
+        }, 100);
+    });
 })();
 
 /**
@@ -161,6 +170,9 @@ function initializeMenuUI(date) {
             ...everydayItems.map(everydayItemHTML),
         ].join("");
     }
+
+    // Adjust meal heights for desktop screens
+    adjustMealHeightsForDesktop();
 }
 
 function variableItemHTML(item_name) {
@@ -271,4 +283,80 @@ function addDailyItemsToMenu() {
 function addDays(date, numDays) {
     const oneDayMs = 1000 * 60 * 60 * 24;
     return new Date(date.getTime() + oneDayMs * numDays);
+}
+
+/**
+ * Adjust meal heights for desktop screens to ensure all items fit within meal outlines.
+ * Only applies to screens 720px and wider.
+ */
+function adjustMealHeightsForDesktop() {
+    // Only apply on desktop screens (720px and wider)
+    if (window.innerWidth < 720) {
+        // On mobile screens, ensure scrolling is always enabled
+        document.querySelector('#page').style.overflow = 'auto';
+        document.querySelector('#actual-menu').style.overflow = 'auto';
+        return;
+    }
+
+    const mealCategories = ['B', 'L', 'S', 'D'];
+    const menuContainer = document.querySelector('#actual-menu');
+    const dayPicker = document.querySelector('.day-picker');
+    
+    // Calculate available height (total viewport height minus day picker)
+    const availableHeight = window.innerHeight - dayPicker.offsetHeight;
+    
+    // Reset heights to auto to measure natural content height
+    mealCategories.forEach(mealId => {
+        const mealElement = document.getElementById(mealId);
+        const mealInner = mealElement.querySelector('.menu-category-inner');
+        mealElement.style.height = 'auto';
+        mealInner.style.height = 'auto';
+    });
+
+    // Find the maximum content height needed
+    let maxContentHeight = 0;
+    mealCategories.forEach(mealId => {
+        const mealElement = document.getElementById(mealId);
+        const contentHeight = mealElement.scrollHeight;
+        maxContentHeight = Math.max(maxContentHeight, contentHeight);
+    });
+    
+    // Add a small tolerance buffer to account for padding/margins/spacing
+    const toleranceBuffer = 20; // 20px tolerance for minor spacing differences
+    const adjustedAvailableHeight = availableHeight + toleranceBuffer;
+
+    // If content exceeds available height, adjust all meals equally
+    if (maxContentHeight > adjustedAvailableHeight) {
+        // Add bottom spacing buffer only when we need to extend meal boxes
+        const bottomSpacingBuffer = 2; // 2rem buffer for bottom spacing
+        maxContentHeight += bottomSpacingBuffer;
+        const adjustedHeight = Math.max(availableHeight, maxContentHeight);
+        
+        mealCategories.forEach(mealId => {
+            const mealElement = document.getElementById(mealId);
+            const mealInner = mealElement.querySelector('.menu-category-inner');
+            
+            mealElement.style.height = adjustedHeight + 'px';
+            mealElement.style.alignSelf = 'flex-start'; // Ensure top alignment
+            mealInner.style.height = '100%';
+        });
+        
+        // Enable main scrollbar when content overflows
+        document.querySelector('#page').style.overflow = 'auto';
+        document.querySelector('#actual-menu').style.overflow = 'auto';
+    } else {
+        // Reset to default behavior if no adjustment needed
+        mealCategories.forEach(mealId => {
+            const mealElement = document.getElementById(mealId);
+            const mealInner = mealElement.querySelector('.menu-category-inner');
+            
+            mealElement.style.height = '';
+            mealElement.style.alignSelf = '';
+            mealInner.style.height = '';
+        });
+        
+        // On desktop, disable main scrollbar when content fits
+        document.querySelector('#page').style.overflow = 'hidden';
+        document.querySelector('#actual-menu').style.overflow = 'hidden';
+    }
 }
