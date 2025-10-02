@@ -1,12 +1,12 @@
 {
-    "start": "09/29/2025",
-    "end": "12/29/2025",
+    "start": "09/28/2025",
+    "end": "11/01/2025",
     "menu": {
         "rotation": {
             "D1": {
                 "B": ["Idli", "Sambhar + Chutney"],
                 "L": [
-                    "Parwal Dry",
+                    "Aloo Capsicum",
                     "Veg Kolhapuri",
                     "Dal Makhni",
                     "Rasam",
@@ -48,7 +48,7 @@
                 "S": ["Kachori"],
                 "D": [
                     "Soya Keema Masala",
-                    "Chhole Kulche",
+                    "Chole Kulche",
                     "Dal Tadka",
                     "Plain Rice",
                     "Chapati",
@@ -61,7 +61,7 @@
                 "B": ["Aloo Paratha", "Curd"],
                 "L": [
                     "Bhindi Masala Dry",
-                    "Kadhi Pakode",
+                    "Kadi Pakode",
                     "Dal Tadka",
                     "Rasam",
                     "Chapati",
@@ -73,9 +73,9 @@
                 ],
                 "S": ["Dabeli"],
                 "D": [
-                    "Paneer Biriyani",
-                    "Chicken Biriyani",
                     "Aloo Beans Dry",
+                    "Paneer Biriyani",
+                    "Chicken Biryani",
                     "Dal Fry",
                     "Curd Rice",
                     "Chapati",
@@ -127,9 +127,9 @@
                 ],
                 "S": ["Masala Maggi"],
                 "D": [
+                    "Baigan Bharta",
                     "Paneer Butter Masala",
-                    "Chicken / Egg Curry",
-                    "Baingan Bharta",
+                    "Chicken/Egg Curry",
                     "Dal Tadka",
                     "Jeera Rice",
                     "Chapati + Paratha",
@@ -156,8 +156,8 @@
                 "S": ["Samosa"],
                 "D": [
                     "Onion & Tomato Uttapam",
-                    "Methi Malai Matar",
-                    "Dal Lasooni",
+                    "Methi Malai Mutter",
+                    "Dal Lahsuni",
                     "Masala Khichdi",
                     "Chapati",
                     "Rasam",
