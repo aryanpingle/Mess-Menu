@@ -1,27 +1,27 @@
 {
-    "start": "08/18/2025",
-    "end": "09/18/2025",
+    "start": "09/29/2025",
+    "end": "12/29/2025",
     "menu": {
         "rotation": {
             "D1": {
-                "B": ["Aloo Paratha", "Curd"],
+                "B": ["Idli", "Sambhar + Chutney"],
                 "L": [
-                    "Aloo Gobhi Dry",
-                    "Red Malai Kofta Gravy",
-                    "Dal Tadka",
+                    "Parwal Dry",
+                    "Veg Kolhapuri",
+                    "Dal Makhni",
                     "Rasam",
                     "Chapati",
-                    "Plain Rice",
-                    "Fryums",
-                    "Red Salad",
-                    "Buttermilk",
-                    "Gulab Jamun"
+                    "Jeera Rice",
+                    "Fried Papad",
+                    "Masala Chopped Salad",
+                    "Punjabi Lassi",
+                    "Fruit Custard"
                 ],
-                "S": ["Spicy Bhelpuri"],
+                "S": ["Schezwan Roll"],
                 "D": [
                     "Tawa Mix Veg Dry",
-                    "Spicy Paneer Lababdar",
-                    "Egg Curry",
+                    "Palak Paneer",
+                    "Egg Bhurji",
                     "Dal Masala",
                     "Jeera Rice",
                     "Chapati",
@@ -32,49 +32,50 @@
                 ]
             },
             "D2": {
-                "B": ["Mutter Usal Kulcha", "Onion"],
+                "B": ["Onion Poha", "Lemon + Sev + Curd"],
                 "L": [
-                    "Mix Veg Dry",
-                    "Punjabi Rajma",
-                    "Dal Kolhapuri",
+                    "Cabbage Dry",
+                    "Dum Aloo Gravy",
+                    "Dal Lahsuni",
                     "Sambhar",
+                    "Chapati",
+                    "Mutter Rice",
+                    "Fryums",
+                    "Moong Onion Salad",
+                    "Plain Curd",
+                    "Shahi Tukda"
+                ],
+                "S": ["Kachori"],
+                "D": [
+                    "Soya Keema Masala",
+                    "Chhole Kulche",
+                    "Dal Tadka",
+                    "Plain Rice",
+                    "Chapati",
+                    "Rasam",
+                    "Onion + Lemon",
+                    "Plain Curd"
+                ]
+            },
+            "D3": {
+                "B": ["Aloo Paratha", "Curd"],
+                "L": [
+                    "Bhindi Masala Dry",
+                    "Kadhi Pakode",
+                    "Dal Tadka",
+                    "Rasam",
                     "Chapati",
                     "Plain Rice",
                     "Roasted Papad",
                     "Chana Onion Tomato Salad",
                     "Plain Curd",
-                    "Rasmalai"
-                ],
-                "S": ["Vada Pav"],
-                "D": [
-                    "Aloo Matar Gravy",
-                    "Masala Puri",
-                    "Dal Chana",
-                    "Plain Rice + Curd Rice",
-                    "Chapati",
-                    "Rasam",
-                    "Onion + Lemon"
-                ]
-            },
-            "D3": {
-                "B": ["Idli", "Sambhar + Chutney"],
-                "L": [
-                    "Soya Masala Dry",
-                    "Veg Kolhapuri",
-                    "Dal Makhni",
-                    "Rasam",
-                    "Chapati",
-                    "Jeera Rice",
-                    "Fryums",
-                    "Sprout Moong Salad",
-                    "Punjabi Lassi",
-                    "Fruit Custard"
+                    "Cream Jamun"
                 ],
                 "S": ["Dabeli"],
                 "D": [
                     "Paneer Biriyani",
                     "Chicken Biriyani",
-                    "Aloo Capsicum Dry",
+                    "Aloo Beans Dry",
                     "Dal Fry",
                     "Curd Rice",
                     "Chapati",
@@ -85,50 +86,50 @@
                 ]
             },
             "D4": {
-                "B": ["Onion Poha", "Lemon + Sev + Curd"],
+                "B": ["Moong Dal Chilla", "Chutney + Ketchup"],
                 "L": [
-                    "Aloo Jeera",
+                    "Aloo Methi Dry",
                     "Chhole Amritsari",
                     "Dal Arhar",
                     "Sambhar",
                     "Puri + Chapati",
                     "Plain Rice",
-                    "Fried Papad",
+                    "Fryums",
                     "Mix Salad",
                     "Fresh Lime Water",
-                    "Rice Kheer"
+                    "Sevaiya Kheer"
                 ],
-                "S": ["Aloo Onion Pakode"],
+                "S": ["Vada Pav"],
                 "D": [
-                    "Veg Manchurian",
+                    "Veg Jalfrezi",
                     "Mushroom Masala",
-                    "Dal Lahsuni",
-                    "Veg Schezwan Fried Rice",
+                    "Dal Fry",
+                    "Plain Rice + Curd Rice",
                     "Chapati",
                     "Rasam",
-                    "Toss Salad",
-                    "Cucumber Raita"
+                    "Green Salad",
+                    "Plain Curd"
                 ]
             },
             "D5": {
-                "B": ["Masala Sandwich", "Ketchup"],
+                "B": ["Veg Sandwich", "Ketchup"],
                 "L": [
-                    "Bhindi Fry",
-                    "Sev Tamatar Sabji",
+                    "Black Chana Dry",
+                    "Palak Corn",
                     "Dal Panchratna",
                     "Rasam",
                     "Chapati",
                     "Plain Rice",
-                    "Fryums",
-                    "Dhokla",
-                    "Plain Curd",
-                    "Cream Jamun"
+                    "Roasted Papad",
+                    "Red Salad",
+                    "Buttermilk",
+                    "Moong Dal Halwa"
                 ],
-                "S": ["Schezwan Roll"],
+                "S": ["Masala Maggi"],
                 "D": [
-                    "Mix Veg Dry",
-                    "Paneer Tikka Masala",
-                    "Chicken/Egg Curry",
+                    "Paneer Butter Masala",
+                    "Chicken / Egg Curry",
+                    "Baigan Bharta",
                     "Dal Tadka",
                     "Jeera Rice",
                     "Chapati + Paratha",
@@ -139,36 +140,37 @@
                 ]
             },
             "D6": {
-                "B": ["Puri Bhaji", "Pickle"],
+                "B": ["Misal Pav", "Farsan + Onion"],
                 "L": [
-                    "Black Chana Dry",
-                    "Dum Aloo Gravy",
-                    "Dal Lasooni",
+                    "Dhudhi Chana Dry",
+                    "Punjabi Rajma",
+                    "Dal Kolhapuri",
                     "Sambhar",
                     "Chapati",
-                    "Mutter Rice",
-                    "Fried Papad",
-                    "Masala Chopped Salad",
-                    "Mint Lemonade",
-                    "Shahi Tukda"
+                    "Plain Rice",
+                    "Fryums",
+                    "Dhokla",
+                    "Plain Curd",
+                    "Gulab Jamun"
                 ],
-                "S": ["French Fries"],
+                "S": ["Samosa"],
                 "D": [
-                    "Moong Dry",
-                    "Veg Kofta",
-                    "Dal Panchratna",
-                    "Soya Masala Biriyani",
+                    "Onion & Tomato Uttapam",
+                    "Methi Malai Matar",
+                    "Dal Lahsuni",
+                    "Masala Khichdi",
                     "Chapati",
                     "Rasam",
-                    "Veg Raita"
+                    "Toss Salad",
+                    "Cucumber Raita"
                 ]
             }
         },
         "sunday": {
-            "B": ["Podi Masala Dosa", "Sambhar + Chutney"],
+            "B": ["Masala Dosa", "Sambhar + Chutney"],
             "L": [
                 "Pyaaz Paratha",
-                "Tamatar Lasoon Chutney",
+                "Tamatar Lahsun Chutney + Thecha",
                 "Dal Banjara",
                 "Kokum Rasam",
                 "Chapati",
@@ -177,12 +179,12 @@
                 "Green Salad",
                 "Dahi Vada"
             ],
-            "S": ["Sabudana Vada"],
+            "S": ["French Fries"],
             "D": [
-                "Pindi Chole Masala",
-                "Bhature",
+                "Pav Bhaji",
+                "Veg Kofta",
                 "Sev Dahi Puri",
-                "Masala Khichdi",
+                "Vegetable Masala Pulao",
                 "Onion + Lemon",
                 "Chapati",
                 "Choco Bite"
